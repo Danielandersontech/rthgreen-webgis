@@ -8,6 +8,7 @@
 // VARIABEL GLOBAL
 // ============================================
 let rthData = [];  // Data RTH untuk dropdown
+let rthDataLoaded = false; // Flag untuk memastikan data RTH sudah dimuat
 
 // ============================================
 // INISIALISASI
@@ -34,7 +35,15 @@ async function loadRthData() {
     try {
         // Prioritas 1: Ambil dari Supabase
         if (window.supabaseDB && window.supabaseDB.isConnected()) {
-            rthData = await window.supabaseDB.getAllRthFromDB();
+            const dbData = await window.supabaseDB.getAllRthFromDB();
+            if (dbData && dbData.length > 0) {
+                rthData = dbData.map(rth => ({
+                    id: rth.objectid?.toString() || rth.id?.toString(),
+                    objectid: rth.objectid,
+                    nama_rth: rth.nama_rth,
+                    jenis_rth: rth.jenis_rth
+                }));
+            }
         }
         
         // Fallback: Ambil dari file GeoJSON lokal
@@ -50,6 +59,10 @@ async function loadRthData() {
                 jenis_rth: f.properties.Jenis_RTH
             }));
         }
+        
+        // Set flag bahwa data sudah dimuat
+        rthDataLoaded = true;
+        console.log('RTH Data loaded:', rthData.length, 'items');
         
         // Isi dropdown
         populateRthDropdowns();
@@ -72,7 +85,8 @@ function populateRthDropdowns() {
     selectForm.innerHTML = '<option value="">-- Pilih Lokasi RTH --</option>';
     rthData.forEach(rth => {
         const option = document.createElement('option');
-        option.value = rth.id || rth.objectid;
+        // Gunakan objectid sebagai value (konsisten dengan database)
+        option.value = rth.objectid?.toString() || rth.id;
         option.textContent = `${rth.nama_rth} (${rth.jenis_rth})`;
         selectForm.appendChild(option);
     });
@@ -81,7 +95,7 @@ function populateRthDropdowns() {
     selectFilter.innerHTML = '<option value="">Semua RTH</option>';
     rthData.forEach(rth => {
         const option = document.createElement('option');
-        option.value = rth.id || rth.objectid;
+        option.value = rth.objectid?.toString() || rth.id;
         option.textContent = rth.nama_rth;
         selectFilter.appendChild(option);
     });
@@ -162,10 +176,14 @@ async function handleSubmit(e) {
             return;
         }
         
+        // Cari nama RTH untuk disimpan juga
+        const rthName = getRthName(rthId);
+        
         // Siapkan data review
         const review = {
             nama: nama,
             rth_id: rthId,
+            rth_name: rthName,  // Simpan juga nama RTH untuk backup
             rating: parseInt(rating),
             komentar: komentar,
             created_at: new Date().toISOString()
@@ -206,6 +224,11 @@ async function loadReviewList() {
     container.innerHTML = '<div class="loading"><div class="spinner"></div></div>';
     
     try {
+        // Pastikan data RTH sudah dimuat terlebih dahulu
+        if (!rthDataLoaded || rthData.length === 0) {
+            await loadRthData();
+        }
+        
         let reviewData;
         const filterRthId = document.getElementById('filterRth').value;
         
@@ -255,7 +278,22 @@ function renderReviewList(container, data) {
     let html = '<div class="grid-2">';
     
     data.forEach(review => {
-        const rthName = review.rth?.nama_rth || getRthName(review.rth_id);
+        // Cari nama RTH dengan berbagai cara
+        let rthName = 'Unknown';
+        
+        // Cara 1: Dari relasi Supabase (jika ada)
+        if (review.rth && review.rth.nama_rth) {
+            rthName = review.rth.nama_rth;
+        }
+        // Cara 2: Dari field rth_name yang disimpan
+        else if (review.rth_name) {
+            rthName = review.rth_name;
+        }
+        // Cara 3: Cari dari rthData lokal
+        else if (review.rth_id) {
+            rthName = getRthName(review.rth_id);
+        }
+        
         const date = formatDate(review.created_at);
         const stars = renderStars(review.rating);
         
@@ -290,6 +328,11 @@ async function loadRekapRating() {
     container.innerHTML = '<div class="loading"><div class="spinner"></div></div>';
     
     try {
+        // Pastikan data RTH sudah dimuat
+        if (!rthDataLoaded || rthData.length === 0) {
+            await loadRthData();
+        }
+        
         let ratingStats;
         
         if (window.supabaseDB && window.supabaseDB.isConnected()) {
@@ -303,7 +346,7 @@ async function loadRekapRating() {
                 if (!statsMap[r.rth_id]) {
                     statsMap[r.rth_id] = {
                         rth_id: r.rth_id,
-                        nama_rth: getRthName(r.rth_id),
+                        nama_rth: r.rth_name || getRthName(r.rth_id),
                         total_rating: 0,
                         count: 0
                     };
@@ -352,6 +395,12 @@ function renderRekapRating(container, stats) {
     const medalColors = ['#f1c40f', '#95a5a6', '#cd7f32'];  // Emas, Perak, Perunggu
     
     stats.forEach((stat, index) => {
+        // Cari nama RTH jika belum ada
+        let namaRth = stat.nama_rth;
+        if (!namaRth || namaRth === 'Unknown') {
+            namaRth = getRthName(stat.rth_id);
+        }
+        
         const stars = renderStars(Math.round(parseFloat(stat.rata_rata)));
         const medalColor = index < 3 ? medalColors[index] : 'var(--light)';
         const medalText = index < 3 ? 'white' : 'var(--dark)';
@@ -362,7 +411,7 @@ function renderRekapRating(container, stats) {
                     <span style="display: inline-block; padding: 3px 10px; background: ${medalColor}; color: ${medalText}; border-radius: 15px; font-size: 0.75rem; font-weight: 600; margin-bottom: 8px;">
                         #${index + 1}
                     </span>
-                    <h4>${stat.nama_rth}</h4>
+                    <h4>${namaRth}</h4>
                     <div class="rating-display">${stars}</div>
                     <span class="review-count">${stat.count} review</span>
                 </div>
@@ -385,12 +434,29 @@ function renderRekapRating(container, stats) {
 
 // Cari nama RTH berdasarkan ID
 function getRthName(rthId) {
-    const rth = rthData.find(r => r.id === rthId || r.objectid?.toString() === rthId);
-    return rth ? rth.nama_rth : 'Unknown';
+    if (!rthId) return 'Unknown';
+    
+    // Konversi ke string untuk perbandingan yang konsisten
+    const searchId = rthId.toString();
+    
+    // Cari di rthData dengan berbagai kemungkinan match
+    const rth = rthData.find(r => {
+        const id1 = r.id?.toString() || '';
+        const id2 = r.objectid?.toString() || '';
+        return id1 === searchId || id2 === searchId;
+    });
+    
+    if (rth) {
+        return rth.nama_rth;
+    }
+    
+    console.log('RTH not found for ID:', rthId, 'Available IDs:', rthData.map(r => r.objectid || r.id));
+    return 'Unknown';
 }
 
 // Format tanggal ke format Indonesia
 function formatDate(dateString) {
+    if (!dateString) return '-';
     const date = new Date(dateString);
     return date.toLocaleDateString('id-ID', {
         day: 'numeric',

@@ -9,6 +9,7 @@
 // ============================================
 let rthData = [];        // Data RTH untuk dropdown
 let selectedFile = null; // File foto yang dipilih
+let rthDataLoaded = false; // Flag untuk memastikan data RTH sudah dimuat
 
 // ============================================
 // INISIALISASI
@@ -35,7 +36,16 @@ async function loadRthData() {
     try {
         // Prioritas 1: Ambil dari Supabase
         if (window.supabaseDB && window.supabaseDB.isConnected()) {
-            rthData = await window.supabaseDB.getAllRthFromDB();
+            const dbData = await window.supabaseDB.getAllRthFromDB();
+            if (dbData && dbData.length > 0) {
+                rthData = dbData.map(rth => ({
+                    id: rth.objectid?.toString() || rth.id?.toString(),
+                    objectid: rth.objectid,
+                    nama_rth: rth.nama_rth,
+                    jenis_rth: rth.jenis_rth,
+                    luas_m2: rth.luas_m2
+                }));
+            }
         }
         
         // Fallback: Ambil dari file GeoJSON lokal
@@ -52,6 +62,10 @@ async function loadRthData() {
                 luas_m2: f.properties.Luas_m2
             }));
         }
+        
+        // Set flag bahwa data sudah dimuat
+        rthDataLoaded = true;
+        console.log('RTH Data loaded:', rthData.length, 'items');
         
         // Isi dropdown dengan data RTH
         populateRthDropdown();
@@ -75,7 +89,8 @@ function populateRthDropdown() {
     // Tambahkan setiap RTH sebagai option
     rthData.forEach(rth => {
         const option = document.createElement('option');
-        option.value = rth.id || rth.objectid;
+        // Gunakan objectid sebagai value (konsisten dengan database)
+        option.value = rth.objectid?.toString() || rth.id;
         option.textContent = `${rth.nama_rth} (${rth.jenis_rth})`;
         select.appendChild(option);
     });
@@ -209,6 +224,9 @@ function removeFile() {
     document.getElementById('fotoLaporan').value = '';
 }
 
+// Expose removeFile ke global scope agar bisa dipanggil dari onclick
+window.removeFile = removeFile;
+
 // ============================================
 // FORM SUBMIT
 // Fungsi untuk mengirim laporan
@@ -228,6 +246,9 @@ async function handleSubmit(e) {
         const kategori = document.getElementById('kategoriLaporan').value;
         const deskripsi = document.getElementById('deskripsiMasalah').value.trim();
         
+        // Cari nama RTH untuk disimpan juga
+        const rthName = getRthName(rthId);
+        
         let fotoUrl = null;
         
         // Upload foto jika ada dan Supabase tersedia
@@ -239,6 +260,7 @@ async function handleSubmit(e) {
         const laporan = {
             nama_pelapor: namaPelapor,
             rth_id: rthId,
+            rth_name: rthName,  // Simpan juga nama RTH untuk backup
             kategori: kategori,
             deskripsi: deskripsi,
             foto_url: fotoUrl,
@@ -288,6 +310,11 @@ async function loadLaporanList() {
     container.innerHTML = '<div class="loading"><div class="spinner"></div></div>';
     
     try {
+        // Pastikan data RTH sudah dimuat terlebih dahulu
+        if (!rthDataLoaded || rthData.length === 0) {
+            await loadRthData();
+        }
+        
         let laporanData;
         
         // Ambil data dari Supabase atau localStorage
@@ -330,16 +357,30 @@ function renderLaporanList(container, data) {
     let html = '<div class="list-container">';
     
     data.forEach(laporan => {
-        // Cari nama RTH
-        const rthName = laporan.rth?.nama_rth || getRthName(laporan.rth_id);
+        // Cari nama RTH dengan berbagai cara
+        let rthName = 'Unknown';
+        
+        // Cara 1: Dari relasi Supabase (jika ada)
+        if (laporan.rth && laporan.rth.nama_rth) {
+            rthName = laporan.rth.nama_rth;
+        }
+        // Cara 2: Dari field rth_name yang disimpan
+        else if (laporan.rth_name) {
+            rthName = laporan.rth_name;
+        }
+        // Cara 3: Cari dari rthData lokal
+        else if (laporan.rth_id) {
+            rthName = getRthName(laporan.rth_id);
+        }
+        
         const date = formatDate(laporan.created_at);
-        const statusClass = `status-${laporan.status}`;
+        const statusClass = `status-${laporan.status || 'baru'}`;
         
         html += `
             <div class="list-item">
                 <div class="list-item-header">
                     <span class="list-item-title">${laporan.kategori}</span>
-                    <span class="status-badge ${statusClass}">${laporan.status}</span>
+                    <span class="status-badge ${statusClass}">${laporan.status || 'baru'}</span>
                 </div>
                 <div class="list-item-meta">
                     <span><i class="fas fa-user"></i> ${laporan.nama_pelapor}</span>
@@ -371,12 +412,29 @@ function renderLaporanList(container, data) {
 
 // Cari nama RTH berdasarkan ID
 function getRthName(rthId) {
-    const rth = rthData.find(r => r.id === rthId || r.objectid?.toString() === rthId);
-    return rth ? rth.nama_rth : 'Unknown';
+    if (!rthId) return 'Unknown';
+    
+    // Konversi ke string untuk perbandingan yang konsisten
+    const searchId = rthId.toString();
+    
+    // Cari di rthData dengan berbagai kemungkinan match
+    const rth = rthData.find(r => {
+        const id1 = r.id?.toString() || '';
+        const id2 = r.objectid?.toString() || '';
+        return id1 === searchId || id2 === searchId;
+    });
+    
+    if (rth) {
+        return rth.nama_rth;
+    }
+    
+    console.log('RTH not found for ID:', rthId, 'Available IDs:', rthData.map(r => r.objectid || r.id));
+    return 'Unknown';
 }
 
 // Format tanggal ke format Indonesia
 function formatDate(dateString) {
+    if (!dateString) return '-';
     const date = new Date(dateString);
     return date.toLocaleDateString('id-ID', {
         day: 'numeric',
