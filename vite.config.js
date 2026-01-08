@@ -13,6 +13,5 @@ export default defineConfig({
       },
     },
   },
-  // File di folder public akan di-copy langsung ke root saat build
   publicDir: 'public',
 })
