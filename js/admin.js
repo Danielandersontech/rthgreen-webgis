@@ -12,19 +12,18 @@
 // ============================================
 let rthData = [];      // Data RTH untuk referensi nama
 let laporanData = [];  // Data laporan untuk tabel
+let rthDataLoaded = false; // Flag untuk memastikan data RTH sudah dimuat
 
 // ============================================
 // INISIALISASI
 // Dijalankan saat halaman selesai dimuat
 // ============================================
-document.addEventListener('DOMContentLoaded', function() {
-    // Load data RTH untuk referensi nama
-    loadRthData();
+document.addEventListener('DOMContentLoaded', async function() {
+    // PENTING: Load data RTH TERLEBIH DAHULU sebelum load data lain
+    await loadRthData();
     
-    // Load statistik
+    // Setelah RTH data siap, baru load yang lain
     loadStatistics();
-    
-    // Load tabel laporan
     loadLaporanTable();
     
     // Setup event listeners
@@ -39,7 +38,15 @@ async function loadRthData() {
     try {
         // Prioritas 1: Supabase
         if (window.supabaseDB && window.supabaseDB.isConnected()) {
-            rthData = await window.supabaseDB.getAllRthFromDB();
+            const dbData = await window.supabaseDB.getAllRthFromDB();
+            if (dbData && dbData.length > 0) {
+                rthData = dbData.map(rth => ({
+                    id: rth.objectid?.toString() || rth.id?.toString(),
+                    objectid: rth.objectid,
+                    nama_rth: rth.nama_rth,
+                    jenis_rth: rth.jenis_rth
+                }));
+            }
         }
         
         // Fallback: GeoJSON
@@ -53,6 +60,11 @@ async function loadRthData() {
                 jenis_rth: f.properties.Jenis_RTH
             }));
         }
+        
+        // Set flag
+        rthDataLoaded = true;
+        console.log('RTH Data loaded for Admin:', rthData.length, 'items');
+        
     } catch (error) {
         console.error('Error loading RTH:', error);
     }
@@ -90,12 +102,12 @@ async function loadStatistics() {
         }
         
         // Update UI dengan data statistik
-        document.getElementById('totalLaporan').textContent = laporanStats.total;
-        document.getElementById('laporanBaru').textContent = laporanStats.baru;
-        document.getElementById('laporanProses').textContent = laporanStats.diproses;
-        document.getElementById('laporanSelesai').textContent = laporanStats.selesai;
-        document.getElementById('totalReview').textContent = reviewStats.total;
-        document.getElementById('avgRating').textContent = reviewStats.rata_rata;
+        document.getElementById('totalLaporan').textContent = laporanStats.total || 0;
+        document.getElementById('laporanBaru').textContent = laporanStats.baru || 0;
+        document.getElementById('laporanProses').textContent = laporanStats.diproses || 0;
+        document.getElementById('laporanSelesai').textContent = laporanStats.selesai || 0;
+        document.getElementById('totalReview').textContent = reviewStats.total || 0;
+        document.getElementById('avgRating').textContent = reviewStats.rata_rata || '-';
         
     } catch (error) {
         console.error('Error loading statistics:', error);
@@ -161,7 +173,12 @@ async function loadLaporanTable() {
     container.innerHTML = '<div class="loading"><div class="spinner"></div></div>';
     
     try {
-        // Ambil data
+        // Pastikan data RTH sudah dimuat
+        if (!rthDataLoaded || rthData.length === 0) {
+            await loadRthData();
+        }
+        
+        // Ambil data laporan
         if (window.supabaseDB && window.supabaseDB.isConnected()) {
             laporanData = await window.supabaseDB.getAllLaporan();
         } else {
@@ -227,9 +244,24 @@ function renderLaporanTable() {
     `;
     
     filteredData.forEach(laporan => {
-        const rthName = laporan.rth?.nama_rth || getRthName(laporan.rth_id);
+        // Cari nama RTH dengan berbagai cara
+        let rthName = 'Unknown';
+        
+        // Cara 1: Dari relasi Supabase (jika ada)
+        if (laporan.rth && laporan.rth.nama_rth) {
+            rthName = laporan.rth.nama_rth;
+        }
+        // Cara 2: Dari field rth_name yang disimpan
+        else if (laporan.rth_name) {
+            rthName = laporan.rth_name;
+        }
+        // Cara 3: Cari dari rthData lokal berdasarkan rth_id
+        else if (laporan.rth_id) {
+            rthName = getRthName(laporan.rth_id);
+        }
+        
         const tanggal = formatDate(laporan.created_at);
-        const statusClass = `status-${laporan.status}`;
+        const statusClass = `status-${laporan.status || 'baru'}`;
         
         html += `
             <tr>
@@ -240,7 +272,7 @@ function renderLaporanTable() {
                     ${rthName}
                 </td>
                 <td>${laporan.kategori}</td>
-                <td><span class="status-badge ${statusClass}">${laporan.status}</span></td>
+                <td><span class="status-badge ${statusClass}">${laporan.status || 'baru'}</span></td>
                 <td>
                     <div style="display: flex; gap: 5px; flex-wrap: wrap;">
                         ${laporan.status !== 'baru' ? `
@@ -297,6 +329,9 @@ async function updateStatus(id, newStatus) {
     }
 }
 
+// Expose updateStatus ke global scope agar bisa dipanggil dari onclick
+window.updateStatus = updateStatus;
+
 // ============================================
 // REKAP RATING
 // Fungsi untuk menampilkan rekap rating RTH
@@ -307,6 +342,11 @@ async function loadRatingList() {
     container.innerHTML = '<div class="loading"><div class="spinner"></div></div>';
     
     try {
+        // Pastikan data RTH sudah dimuat
+        if (!rthDataLoaded || rthData.length === 0) {
+            await loadRthData();
+        }
+        
         let ratingStats = [];
         let totalReview = 0;
         let totalRating = 0;
@@ -329,7 +369,7 @@ async function loadRatingList() {
                 if (!statsMap[r.rth_id]) {
                     statsMap[r.rth_id] = {
                         rth_id: r.rth_id,
-                        nama_rth: getRthName(r.rth_id),
+                        nama_rth: r.rth_name || getRthName(r.rth_id),
                         total_rating: 0,
                         count: 0
                     };
@@ -384,6 +424,12 @@ function renderRatingList(container, stats) {
     const medalColors = ['#f1c40f', '#95a5a6', '#cd7f32'];
     
     stats.forEach((stat, index) => {
+        // Cari nama RTH jika belum ada
+        let namaRth = stat.nama_rth;
+        if (!namaRth || namaRth === 'Unknown') {
+            namaRth = getRthName(stat.rth_id);
+        }
+        
         const stars = renderStars(Math.round(parseFloat(stat.rata_rata)));
         const medalColor = index < 3 ? medalColors[index] : 'var(--light)';
         const medalText = index < 3 ? 'white' : 'var(--dark)';
@@ -394,7 +440,7 @@ function renderRatingList(container, stats) {
                     <span style="display: inline-block; padding: 3px 10px; background: ${medalColor}; color: ${medalText}; border-radius: 15px; font-size: 0.75rem; font-weight: 600; margin-bottom: 8px;">
                         #${index + 1}
                     </span>
-                    <h4>${stat.nama_rth}</h4>
+                    <h4>${namaRth}</h4>
                     <div class="rating-display">${stars}</div>
                     <div class="review-count">${stat.count} review</div>
                 </div>
@@ -417,12 +463,29 @@ function renderRatingList(container, stats) {
 
 // Cari nama RTH berdasarkan ID
 function getRthName(rthId) {
-    const rth = rthData.find(r => r.id === rthId || r.objectid?.toString() === rthId);
-    return rth ? rth.nama_rth : 'Unknown';
+    if (!rthId) return 'Unknown';
+    
+    // Konversi ke string untuk perbandingan yang konsisten
+    const searchId = rthId.toString();
+    
+    // Cari di rthData dengan berbagai kemungkinan match
+    const rth = rthData.find(r => {
+        const id1 = r.id?.toString() || '';
+        const id2 = r.objectid?.toString() || '';
+        return id1 === searchId || id2 === searchId;
+    });
+    
+    if (rth) {
+        return rth.nama_rth;
+    }
+    
+    console.log('RTH not found for ID:', rthId, 'Available IDs sample:', rthData.slice(0, 5).map(r => r.objectid || r.id));
+    return 'Unknown';
 }
 
 // Format tanggal ke format Indonesia
 function formatDate(dateString) {
+    if (!dateString) return '-';
     const date = new Date(dateString);
     return date.toLocaleDateString('id-ID', {
         day: 'numeric',
@@ -451,9 +514,15 @@ function showAlert(type, message) {
     const container = document.getElementById('alertContainer');
     const alertId = Date.now();
     
+    const icons = {
+        success: 'check-circle',
+        error: 'exclamation-circle',
+        warning: 'exclamation-triangle'
+    };
+    
     const alertHtml = `
         <div id="alert-${alertId}" class="alert alert-${type}">
-            <i class="fas fa-${type === 'success' ? 'check-circle' : 'exclamation-circle'}"></i>
+            <i class="fas fa-${icons[type] || 'info-circle'}"></i>
             ${message}
         </div>
     `;
