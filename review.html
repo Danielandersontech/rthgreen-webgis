@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review - WebGIS RTH Kota Pekanbaru</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/laporan-review.css">
+</head>
+<body>
+    <!-- ============================================
+         NAVIGATION - TANPA LINK ADMIN
+    ============================================ -->
+    <nav class="navbar scrolled">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <i class="fas fa-leaf"></i>
+                <span>WebGIS RTH Pekanbaru</span>
+            </a>
+            
+            <!-- Menu untuk User Biasa -->
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link"><i class="fas fa-home"></i> Beranda</a></li>
+                <li><a href="peta.html" class="nav-link"><i class="fas fa-map"></i> Peta</a></li>
+                <li><a href="laporan.html" class="nav-link"><i class="fas fa-file-alt"></i> Laporan</a></li>
+                <li><a href="review.html" class="nav-link active"><i class="fas fa-star"></i> Review</a></li>
+            </ul>
+            
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ============================================
+         MAIN CONTENT
+    ============================================ -->
+    <div class="page-container">
+        <!-- Header Halaman -->
+        <div class="page-header">
+            <h1><i class="fas fa-star"></i> Review & Rating RTH</h1>
+            <p>Berikan ulasan dan penilaian untuk Ruang Terbuka Hijau di Kota Pekanbaru</p>
+        </div>
+
+        <!-- Container Alert -->
+        <div id="alertContainer"></div>
+
+        <!-- Tab Navigation -->
+        <div class="tabs-container">
+            <button class="tab-btn active" data-tab="form">
+                <i class="fas fa-plus-circle"></i> Tulis Review
+            </button>
+            <button class="tab-btn" data-tab="list">
+                <i class="fas fa-list"></i> Daftar Review
+            </button>
+            <button class="tab-btn" data-tab="rekap">
+                <i class="fas fa-chart-bar"></i> Rekap Rating
+            </button>
+        </div>
+
+        <!-- ===== TAB: FORM REVIEW ===== -->
+        <div id="tab-form" class="tab-content active">
+            <div class="card">
+                <div class="card-header">
+                    <i class="fas fa-edit"></i> Formulir Review Baru
+                </div>
+                <div class="card-body">
+                    <form id="formReview">
+                        <!-- Nama Reviewer -->
+                        <div class="form-group">
+                            <label><i class="fas fa-user"></i> Nama Anda</label>
+                            <input type="text" class="form-control" id="namaReviewer" 
+                                   placeholder="Masukkan nama Anda" required>
+                        </div>
+                        
+                        <!-- Pilih RTH -->
+                        <div class="form-group">
+                            <label><i class="fas fa-map-marker-alt"></i> Pilih RTH</label>
+                            <select class="form-select" id="rthSelect" required>
+                                <option value="">-- Pilih Lokasi RTH --</option>
+                            </select>
+                        </div>
+                        
+                        <!-- Rating Bintang -->
+                        <div class="form-group">
+                            <label><i class="fas fa-star"></i> Rating</label>
+                            <div class="rating-input">
+                                <input type="radio" name="rating" id="rating5" value="5" required>
+                                <label for="rating5"><i class="fas fa-star"></i></label>
+                                <input type="radio" name="rating" id="rating4" value="4">
+                                <label for="rating4"><i class="fas fa-star"></i></label>
+                                <input type="radio" name="rating" id="rating3" value="3">
+                                <label for="rating3"><i class="fas fa-star"></i></label>
+                                <input type="radio" name="rating" id="rating2" value="2">
+                                <label for="rating2"><i class="fas fa-star"></i></label>
+                                <input type="radio" name="rating" id="rating1" value="1">
+                                <label for="rating1"><i class="fas fa-star"></i></label>
+                            </div>
+                        </div>
+                        
+                        <!-- Komentar -->
+                        <div class="form-group">
+                            <label><i class="fas fa-comment"></i> Komentar</label>
+                            <textarea class="form-control" id="komentarReview" 
+                                      placeholder="Ceritakan pengalaman Anda mengunjungi RTH ini..." required></textarea>
+                        </div>
+                        
+                        <!-- Tombol Submit -->
+                        <button type="submit" class="btn btn-submit">
+                            <i class="fas fa-paper-plane"></i> Kirim Review
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== TAB: DAFTAR REVIEW ===== -->
+        <div id="tab-list" class="tab-content">
+            <!-- Filter RTH -->
+            <div class="card" style="margin-bottom: 20px;">
+                <div class="card-body" style="padding: 15px 20px;">
+                    <div style="display: flex; align-items: center; gap: 15px; flex-wrap: wrap;">
+                        <label style="font-weight: 500;"><i class="fas fa-filter"></i> Filter RTH:</label>
+                        <select id="filterRth" class="form-select" style="max-width: 300px;">
+                            <option value="">Semua RTH</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- List Review -->
+            <div id="reviewList">
+                <div class="loading">
+                    <div class="spinner"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== TAB: REKAP RATING ===== -->
+        <div id="tab-rekap" class="tab-content">
+            <div id="rekapRating">
+                <div class="loading">
+                    <div class="spinner"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================
+         FOOTER
+    ============================================ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <i class="fas fa-leaf"></i>
+                    <span>WebGIS RTH Pekanbaru</span>
+                </div>
+                <p>&copy; 2025 Sistem Informasi Geografis RTH Kota Pekanbaru</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============================================
+         SCRIPTS
+    ============================================ -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="js/supabase-config.js"></script>
+    <script src="js/review.js"></script>
+</body>
+</html>

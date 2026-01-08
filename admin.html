@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel Admin - WebGIS RTH Kota Pekanbaru</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/laporan-review.css">
+    
+    <!-- ============================================
+         CATATAN: HALAMAN INI HANYA UNTUK ADMIN
+         Akses via URL langsung: /admin.html
+         Tidak ada link dari halaman publik
+    ============================================ -->
+</head>
+<body>
+    <!-- ============================================
+         NAVIGATION KHUSUS ADMIN
+         Navigasi berbeda - ada tombol kembali ke publik
+    ============================================ -->
+    <nav class="navbar scrolled">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <i class="fas fa-leaf"></i>
+                <span>WebGIS RTH Pekanbaru</span>
+            </a>
+            
+            <!-- Menu Admin - Berbeda dari User Biasa -->
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link"><i class="fas fa-home"></i> Beranda</a></li>
+                <li><a href="peta.html" class="nav-link"><i class="fas fa-map"></i> Peta</a></li>
+                <li><a href="admin.html" class="nav-link active"><i class="fas fa-user-shield"></i> Admin Panel</a></li>
+            </ul>
+            
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ============================================
+         MAIN CONTENT - ADMIN PANEL
+    ============================================ -->
+    <div class="page-container">
+        <!-- Header Admin -->
+        <div class="page-header">
+            <h1><i class="fas fa-user-shield"></i> Panel Admin</h1>
+            <p>Kelola laporan dan pantau statistik sistem</p>
+        </div>
+
+        <!-- Container Alert -->
+        <div id="alertContainer"></div>
+
+        <!-- ===== STATISTICS CARDS ===== -->
+        <div class="stats-grid" id="statsGrid">
+            <!-- Total Laporan -->
+            <div class="stat-card-mini">
+                <div class="stat-icon" style="background: linear-gradient(135deg, #3498db, #2980b9);">
+                    <i class="fas fa-file-alt"></i>
+                </div>
+                <div>
+                    <div class="stat-value" id="totalLaporan">0</div>
+                    <div class="stat-label">Total Laporan</div>
+                </div>
+            </div>
+            
+            <!-- Laporan Baru -->
+            <div class="stat-card-mini">
+                <div class="stat-icon" style="background: linear-gradient(135deg, #e74c3c, #c0392b);">
+                    <i class="fas fa-clock"></i>
+                </div>
+                <div>
+                    <div class="stat-value" id="laporanBaru">0</div>
+                    <div class="stat-label">Laporan Baru</div>
+                </div>
+            </div>
+            
+            <!-- Sedang Diproses -->
+            <div class="stat-card-mini">
+                <div class="stat-icon" style="background: linear-gradient(135deg, #f39c12, #e67e22);">
+                    <i class="fas fa-spinner"></i>
+                </div>
+                <div>
+                    <div class="stat-value" id="laporanProses">0</div>
+                    <div class="stat-label">Sedang Diproses</div>
+                </div>
+            </div>
+            
+            <!-- Selesai -->
+            <div class="stat-card-mini">
+                <div class="stat-icon" style="background: linear-gradient(135deg, #27ae60, #1e8449);">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <div>
+                    <div class="stat-value" id="laporanSelesai">0</div>
+                    <div class="stat-label">Selesai</div>
+                </div>
+            </div>
+            
+            <!-- Total Review -->
+            <div class="stat-card-mini">
+                <div class="stat-icon" style="background: linear-gradient(135deg, #9b59b6, #8e44ad);">
+                    <i class="fas fa-star"></i>
+                </div>
+                <div>
+                    <div class="stat-value" id="totalReview">0</div>
+                    <div class="stat-label">Total Review</div>
+                </div>
+            </div>
+            
+            <!-- Rata-rata Rating -->
+            <div class="stat-card-mini">
+                <div class="stat-icon" style="background: linear-gradient(135deg, #f1c40f, #f39c12);">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <div>
+                    <div class="stat-value" id="avgRating">-</div>
+                    <div class="stat-label">Rata-rata Rating</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tab Navigation -->
+        <div class="tabs-container">
+            <button class="tab-btn active" data-tab="laporan">
+                <i class="fas fa-file-alt"></i> Kelola Laporan
+            </button>
+            <button class="tab-btn" data-tab="rating">
+                <i class="fas fa-star"></i> Rekap Rating RTH
+            </button>
+        </div>
+
+        <!-- ===== TAB: KELOLA LAPORAN ===== -->
+        <div id="tab-laporan" class="tab-content active">
+            <!-- Filter Status -->
+            <div class="card" style="margin-bottom: 20px;">
+                <div class="card-body" style="padding: 15px 20px;">
+                    <div style="display: flex; align-items: center; gap: 15px; flex-wrap: wrap;">
+                        <label style="font-weight: 500;"><i class="fas fa-filter"></i> Filter Status:</label>
+                        <select id="filterStatus" class="form-select" style="max-width: 200px;">
+                            <option value="">Semua Status</option>
+                            <option value="baru">Baru</option>
+                            <option value="diproses">Diproses</option>
+                            <option value="selesai">Selesai</option>
+                        </select>
+                        <span id="filterInfo" style="color: var(--text-light); font-size: 0.9rem;"></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tabel Laporan -->
+            <div id="laporanTable">
+                <div class="loading">
+                    <div class="spinner"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== TAB: REKAP RATING ===== -->
+        <div id="tab-rating" class="tab-content">
+            <!-- Ringkasan Rating -->
+            <div class="card" style="margin-bottom: 25px;">
+                <div class="card-header">
+                    <i class="fas fa-chart-bar"></i> Ringkasan Rating
+                </div>
+                <div class="card-body">
+                    <div class="grid-3" id="ratingSummary">
+                        <div style="text-align: center;">
+                            <div style="font-size: 2.5rem; font-weight: 700; color: var(--primary);" id="summaryAvg">-</div>
+                            <div style="color: var(--text-light);">Rata-rata Rating</div>
+                            <div class="rating-display" id="summaryStars" style="justify-content: center; margin-top: 5px;"></div>
+                        </div>
+                        <div style="text-align: center;">
+                            <div style="font-size: 2.5rem; font-weight: 700; color: var(--secondary);" id="summaryTotal">0</div>
+                            <div style="color: var(--text-light);">Total Review</div>
+                        </div>
+                        <div style="text-align: center;">
+                            <div style="font-size: 2.5rem; font-weight: 700; color: #f39c12;" id="summaryRth">0</div>
+                            <div style="color: var(--text-light);">RTH Direview</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Peringkat Rating RTH -->
+            <h3 style="margin-bottom: 15px;"><i class="fas fa-list-ol"></i> Peringkat Rating RTH</h3>
+            <div id="ratingList">
+                <div class="loading">
+                    <div class="spinner"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================
+         FOOTER
+    ============================================ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <i class="fas fa-leaf"></i>
+                    <span>WebGIS RTH Pekanbaru</span>
+                </div>
+                <p>&copy; 2025 Sistem Informasi Geografis RTH Kota Pekanbaru</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============================================
+         SCRIPTS
+    ============================================ -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="js/supabase-config.js"></script>
+    <script src="js/admin.js"></script>
+</body>
+</html>

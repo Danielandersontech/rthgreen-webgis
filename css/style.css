@@ -1,0 +1,758 @@
+/* ============================================
+   STYLE.CSS - Global Styles
+   WebGIS RTH Kota Pekanbaru
+   
+   File ini berisi styling global yang digunakan
+   di semua halaman website
+============================================ */
+
+/* ===== RESET & BOX SIZING =====
+   Menghapus margin/padding default browser
+   dan menggunakan box-sizing border-box
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== CSS VARIABLES =====
+   Variabel warna dan styling yang digunakan
+   di seluruh website untuk konsistensi
+*/
+:root {
+    /* Warna Utama */
+    --primary: #27ae60;        /* Hijau - warna utama RTH */
+    --primary-dark: #1e8449;   /* Hijau gelap - untuk hover */
+    --secondary: #3498db;      /* Biru - warna sekunder */
+    --accent: #9b59b6;         /* Ungu - warna aksen */
+    
+    /* Warna Netral */
+    --dark: #2c3e50;           /* Warna teks gelap */
+    --light: #ecf0f1;          /* Background terang */
+    --white: #ffffff;          /* Putih */
+    --text: #333333;           /* Warna teks utama */
+    --text-light: #7f8c8d;     /* Warna teks sekunder */
+    
+    /* Efek Shadow */
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.15);
+    
+    /* Transisi */
+    --transition: all 0.3s ease;
+}
+
+/* ===== BODY =====
+   Styling dasar untuk body
+*/
+body {
+    font-family: 'Poppins', sans-serif;  /* Font utama */
+    line-height: 1.6;                     /* Jarak antar baris */
+    color: var(--text);                   /* Warna teks */
+    background-color: var(--light);       /* Background */
+}
+
+/* ===== CONTAINER =====
+   Wrapper untuk membatasi lebar konten
+*/
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ============================================
+   NAVIGATION BAR
+   Navbar fixed di atas halaman
+============================================ */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;              /* Di atas semua elemen */
+    background: transparent;     /* Transparan saat di atas */
+    padding: 1rem 0;
+    transition: var(--transition);
+}
+
+/* Navbar saat di-scroll - background putih */
+.navbar.scrolled {
+    background: var(--white);
+    box-shadow: var(--shadow);
+}
+
+/* Warna teks navbar saat scrolled */
+.navbar.scrolled .nav-logo,
+.navbar.scrolled .nav-link {
+    color: var(--dark);
+}
+
+/* Container navbar */
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo navbar */
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--white);
+    text-decoration: none;
+}
+
+/* Icon logo */
+.nav-logo i {
+    color: var(--primary);
+}
+
+/* Menu navigasi */
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+/* Link navigasi */
+.nav-link {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    border-radius: 25px;
+    transition: var(--transition);
+}
+
+/* Hover dan active state link */
+.nav-link:hover,
+.nav-link.active {
+    background: var(--primary);
+    color: var(--white);
+}
+
+/* ===== HAMBURGER MENU =====
+   Tombol menu untuk mobile
+*/
+.hamburger {
+    display: none;  /* Tersembunyi di desktop */
+    cursor: pointer;
+}
+
+/* Garis hamburger */
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: var(--white);
+    transition: var(--transition);
+}
+
+/* Warna bar saat scrolled */
+.navbar.scrolled .bar {
+    background-color: var(--dark);
+}
+
+/* ============================================
+   HERO SECTION
+   Banner utama di halaman beranda
+============================================ */
+.hero {
+    height: 100vh;
+    background: linear-gradient(135deg, #1a5f2a 0%, #2c8a4b 50%, #1e6b35 100%),
+                url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1920') center/cover;
+    background-blend-mode: overlay;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+    color: var(--white);
+}
+
+/* Overlay gelap di hero */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.5) 100%);
+}
+
+/* Konten hero */
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+/* Judul hero */
+.hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    animation: fadeInUp 0.8s ease;
+}
+
+/* Sub-judul hero */
+.hero-content h2 {
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 20px;
+    color: var(--primary);
+    animation: fadeInUp 0.8s ease 0.2s backwards;
+}
+
+/* Deskripsi hero */
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    opacity: 0.9;
+    animation: fadeInUp 0.8s ease 0.4s backwards;
+}
+
+/* ===== TOMBOL UTAMA ===== */
+.btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--primary);
+    color: var(--white);
+    padding: 15px 35px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: var(--transition);
+    animation: fadeInUp 0.8s ease 0.6s backwards;
+}
+
+/* Hover tombol */
+.btn-primary:hover {
+    background: var(--primary-dark);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lg);
+}
+
+/* Indikator scroll */
+.scroll-indicator {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: bounce 2s infinite;
+}
+
+.scroll-indicator i {
+    font-size: 2rem;
+    color: var(--white);
+    opacity: 0.7;
+}
+
+/* ============================================
+   STATISTICS SECTION
+   Bagian statistik RTH
+============================================ */
+.statistics {
+    padding: 80px 0;
+    background: var(--white);
+}
+
+/* Judul section */
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--dark);
+    margin-bottom: 50px;
+    position: relative;
+}
+
+/* Garis bawah judul */
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: var(--primary);
+    border-radius: 2px;
+}
+
+/* Grid statistik */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+}
+
+/* Card statistik */
+.stat-card {
+    background: var(--white);
+    border-radius: 20px;
+    padding: 40px 30px;
+    text-align: center;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+/* Animasi card muncul */
+.stat-card.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Hover card */
+.stat-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
+}
+
+/* Icon statistik */
+.stat-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+}
+
+.stat-icon i {
+    font-size: 2rem;
+    color: var(--white);
+}
+
+/* Angka statistik */
+.stat-number {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--dark);
+    line-height: 1;
+    margin-bottom: 10px;
+}
+
+/* Label statistik */
+.stat-label {
+    color: var(--text-light);
+    font-size: 1rem;
+}
+
+/* ============================================
+   ABOUT SECTION
+   Bagian tentang WebGIS
+============================================ */
+.about {
+    padding: 80px 0;
+    background: var(--light);
+}
+
+/* Grid about - 2 kolom */
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+/* Konten about */
+.about-content h2 {
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.about-content h2::after {
+    left: 0;
+    transform: none;
+}
+
+.about-content p {
+    margin-bottom: 20px;
+    color: var(--text);
+    line-height: 1.8;
+}
+
+.about-content h3 {
+    margin: 30px 0 15px;
+    color: var(--dark);
+}
+
+/* List fitur */
+.feature-list {
+    list-style: none;
+}
+
+.feature-list li {
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.feature-list i {
+    color: var(--primary);
+    font-size: 1.2rem;
+}
+
+/* Frame gambar about */
+.about-image {
+    position: relative;
+}
+
+.image-frame {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+}
+
+/* Border dekoratif */
+.image-frame::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    right: 20px;
+    bottom: 20px;
+    border: 4px solid var(--primary);
+    border-radius: 20px;
+    z-index: -1;
+}
+
+.image-frame img {
+    width: 100%;
+    display: block;
+}
+
+/* ============================================
+   CATEGORIES SECTION
+   Bagian kategori RTH
+============================================ */
+.categories {
+    padding: 80px 0;
+    background: var(--white);
+}
+
+/* Grid kategori */
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+}
+
+/* Card kategori */
+.category-card {
+    background: var(--white);
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    border: 2px solid transparent;
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+/* Animasi card muncul */
+.category-card.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Hover card kategori */
+.category-card:hover {
+    border-color: var(--primary);
+    transform: translateY(-5px);
+}
+
+/* Icon kategori */
+.category-icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+}
+
+.category-icon i {
+    font-size: 1.8rem;
+    color: var(--white);
+}
+
+/* Judul kategori */
+.category-card h3 {
+    font-size: 1.2rem;
+    color: var(--dark);
+    margin-bottom: 10px;
+}
+
+/* Deskripsi kategori */
+.category-card p {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    margin-bottom: 15px;
+}
+
+/* Badge jumlah */
+.category-count {
+    display: inline-block;
+    background: var(--light);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--primary);
+}
+
+/* ============================================
+   CTA SECTION
+   Call to Action
+============================================ */
+.cta {
+    padding: 80px 0;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    text-align: center;
+    color: var(--white);
+}
+
+.cta h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.cta p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+/* Tombol CTA */
+.btn-large {
+    padding: 18px 45px;
+    font-size: 1.2rem;
+}
+
+.cta .btn-primary {
+    background: var(--white);
+    color: var(--primary);
+}
+
+.cta .btn-primary:hover {
+    background: var(--dark);
+    color: var(--white);
+}
+
+/* ============================================
+   CONTACT SECTION
+   Bagian kontak
+============================================ */
+.contact {
+    padding: 80px 0;
+    background: var(--light);
+}
+
+/* Grid kontak */
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+/* Card kontak */
+.contact-card {
+    background: var(--white);
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+}
+
+.contact-card i {
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin-bottom: 20px;
+}
+
+.contact-card h3 {
+    color: var(--dark);
+    margin-bottom: 10px;
+}
+
+.contact-card p {
+    color: var(--text-light);
+    font-size: 0.95rem;
+}
+
+/* ============================================
+   FOOTER
+   Bagian bawah halaman
+============================================ */
+.footer {
+    background: var(--dark);
+    padding: 40px 0;
+    color: var(--white);
+    text-align: center;
+}
+
+/* Logo footer */
+.footer-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.footer-logo i {
+    color: var(--primary);
+}
+
+.footer p {
+    opacity: 0.8;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+
+.footer-credit {
+    font-size: 0.8rem;
+    opacity: 0.6;
+}
+
+/* ============================================
+   ANIMATIONS
+   Animasi CSS
+============================================ */
+
+/* Animasi fade in ke atas */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animasi bounce */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateX(-50%) translateY(0);
+    }
+    40% {
+        transform: translateX(-50%) translateY(-10px);
+    }
+    60% {
+        transform: translateX(-50%) translateY(-5px);
+    }
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   Styling untuk berbagai ukuran layar
+============================================ */
+
+/* Tablet */
+@media (max-width: 968px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .about-image {
+        order: -1;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-content h2 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    /* Menu mobile */
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        flex-direction: column;
+        background-color: var(--white);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: var(--shadow);
+        padding: 20px 0;
+        gap: 0;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-link {
+        color: var(--dark);
+        padding: 15px;
+        justify-content: center;
+    }
+
+    /* Tampilkan hamburger di mobile */
+    .hamburger {
+        display: block;
+    }
+
+    /* Animasi hamburger aktif */
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    /* Ukuran font mobile */
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .cta h2 {
+        font-size: 1.8rem;
+    }
+}

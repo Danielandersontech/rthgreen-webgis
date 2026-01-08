@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peta RTH - WebGIS Kota Pekanbaru</title>
+    
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css" />
+    
+    <!-- Google Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/peta.css">
+</head>
+<body class="peta-page">
+    <!-- ============================================
+         NAVIGATION - TANPA LINK ADMIN
+    ============================================ -->
+    <nav class="navbar navbar-peta">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-leaf"></i>
+                <span>WebGIS RTH Pekanbaru</span>
+            </div>
+            
+            <!-- Menu untuk User Biasa -->
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link"><i class="fas fa-home"></i> Beranda</a></li>
+                <li><a href="peta.html" class="nav-link active"><i class="fas fa-map"></i> Peta</a></li>
+                <li><a href="laporan.html" class="nav-link"><i class="fas fa-file-alt"></i> Laporan</a></li>
+                <li><a href="review.html" class="nav-link"><i class="fas fa-star"></i> Review</a></li>
+            </ul>
+            
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ============================================
+         MAP CONTAINER
+    ============================================ -->
+    <div class="map-container">
+        <!-- Sidebar Filter -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <h3><i class="fas fa-filter"></i> Filter & Layer</h3>
+                <button class="sidebar-toggle" id="sidebarToggle">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+            </div>
+
+            <div class="sidebar-content">
+                <!-- Search -->
+                <div class="filter-section">
+                    <h4><i class="fas fa-search"></i> Pencarian</h4>
+                    <input type="text" id="searchInput" class="search-input" placeholder="Cari nama RTH...">
+                </div>
+
+                <!-- Layer Control -->
+                <div class="filter-section">
+                    <h4><i class="fas fa-layer-group"></i> Layer Jenis RTH</h4>
+                    <div class="checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="layer-taman-kota" checked data-layer="Taman Kota">
+                            <span class="checkmark" style="--color: #27ae60;"></span>
+                            <span class="label-text">
+                                <i class="fas fa-tree" style="color: #27ae60;"></i> Taman Kota
+                                <span class="count" id="count-taman-kota">15</span>
+                            </span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="layer-jalur-hijau" checked data-layer="Jalur Hijau Di Jalan">
+                            <span class="checkmark" style="--color: #3498db;"></span>
+                            <span class="label-text">
+                                <i class="fas fa-road" style="color: #3498db;"></i> Jalur Hijau Jalan
+                                <span class="count" id="count-jalur-hijau">137</span>
+                            </span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="layer-taman" checked data-layer="Taman">
+                            <span class="checkmark" style="--color: #9b59b6;"></span>
+                            <span class="label-text">
+                                <i class="fas fa-spa" style="color: #9b59b6;"></i> Taman
+                                <span class="count" id="count-taman">9</span>
+                            </span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="layer-kebun-bibit" checked data-layer="Kebun Bibit">
+                            <span class="checkmark" style="--color: #e67e22;"></span>
+                            <span class="label-text">
+                                <i class="fas fa-seedling" style="color: #e67e22;"></i> Kebun Bibit
+                                <span class="count" id="count-kebun-bibit">2</span>
+                            </span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="layer-hutan-kota" checked data-layer="Hutan Kota">
+                            <span class="checkmark" style="--color: #16a085;"></span>
+                            <span class="label-text">
+                                <i class="fas fa-mountain" style="color: #16a085;"></i> Hutan Kota
+                                <span class="count" id="count-hutan-kota">1</span>
+                            </span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Filter Fasilitas -->
+                <div class="filter-section">
+                    <h4><i class="fas fa-cogs"></i> Filter Fasilitas</h4>
+                    <div class="checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="filter-tempat-duduk" data-filter="tempat_duduk">
+                            <span class="checkmark" style="--color: #f39c12;"></span>
+                            <span class="label-text">
+                                <i class="fas fa-chair" style="color: #f39c12;"></i> Tempat Duduk
+                            </span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="filter-tempat-sampah" data-filter="tempat_sampah">
+                            <span class="checkmark" style="--color: #1abc9c;"></span>
+                            <span class="label-text">
+                                <i class="fas fa-trash" style="color: #1abc9c;"></i> Tempat Sampah
+                            </span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="filter-penerangan" data-filter="penerangan">
+                            <span class="checkmark" style="--color: #f1c40f;"></span>
+                            <span class="label-text">
+                                <i class="fas fa-lightbulb" style="color: #f1c40f;"></i> Penerangan
+                            </span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Filter Luas -->
+                <div class="filter-section">
+                    <h4><i class="fas fa-expand"></i> Klasifikasi Luas</h4>
+                    <select id="filter-luas" class="filter-select">
+                        <option value="all">Semua Ukuran</option>
+                        <option value="Kecil">Kecil (&lt; 500 m²)</option>
+                        <option value="Sedang">Sedang (500 - 2000 m²)</option>
+                        <option value="Besar">Besar (2000 - 10000 m²)</option>
+                        <option value="Sangat Besar">Sangat Besar (&gt; 10000 m²)</option>
+                    </select>
+                </div>
+
+                <!-- Filter Pengunjung -->
+                <div class="filter-section">
+                    <h4><i class="fas fa-users"></i> Frekuensi Pengunjung</h4>
+                    <select id="filter-pengunjung" class="filter-select">
+                        <option value="all">Semua</option>
+                        <option value="Tidak Ada">Tidak Ada Pengunjung</option>
+                        <option value="Rendah">Rendah (&lt; 50/hari)</option>
+                        <option value="Sedang">Sedang (50 - 200/hari)</option>
+                        <option value="Tinggi">Tinggi (&gt; 200/hari)</option>
+                    </select>
+                </div>
+
+                <!-- Basemap -->
+                <div class="filter-section">
+                    <h4><i class="fas fa-map"></i> Basemap</h4>
+                    <select id="basemap-select" class="filter-select">
+                        <option value="osm">OpenStreetMap</option>
+                        <option value="satellite">Satellite (ESRI)</option>
+                        <option value="topo">Topografi</option>
+                        <option value="dark">Dark Mode</option>
+                    </select>
+                </div>
+
+                <!-- Actions -->
+                <div class="filter-section">
+                    <button class="btn-reset" id="resetFilters">
+                        <i class="fas fa-undo"></i> Reset Filter
+                    </button>
+                    <button class="btn-export" id="exportData">
+                        <i class="fas fa-download"></i> Export Data
+                    </button>
+                </div>
+
+                <!-- Statistics -->
+                <div class="filter-section stats-section">
+                    <h4><i class="fas fa-chart-bar"></i> Statistik</h4>
+                    <div class="mini-stats">
+                        <div class="mini-stat">
+                            <span class="mini-stat-value" id="total-visible">164</span>
+                            <span class="mini-stat-label">RTH Tampil</span>
+                        </div>
+                        <div class="mini-stat">
+                            <span class="mini-stat-value" id="total-luas">0</span>
+                            <span class="mini-stat-label">Total Luas (ha)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Mobile Sidebar Toggle -->
+        <button class="mobile-sidebar-toggle" id="mobileSidebarToggle">
+            <i class="fas fa-sliders-h"></i>
+        </button>
+
+        <!-- Map -->
+        <div id="map"></div>
+
+        <!-- Legend -->
+        <div class="legend" id="legend">
+            <div class="legend-header">
+                <h4><i class="fas fa-info-circle"></i> Legenda</h4>
+                <button class="legend-toggle" id="legendToggle">
+                    <i class="fas fa-minus"></i>
+                </button>
+            </div>
+            <div class="legend-content" id="legendContent">
+                <div class="legend-item">
+                    <span class="legend-marker" style="background: #27ae60;"></span>
+                    <span>Taman Kota</span>
+                </div>
+                <div class="legend-item">
+                    <span class="legend-marker" style="background: #3498db;"></span>
+                    <span>Jalur Hijau Jalan</span>
+                </div>
+                <div class="legend-item">
+                    <span class="legend-marker" style="background: #9b59b6;"></span>
+                    <span>Taman</span>
+                </div>
+                <div class="legend-item">
+                    <span class="legend-marker" style="background: #e67e22;"></span>
+                    <span>Kebun Bibit</span>
+                </div>
+                <div class="legend-item">
+                    <span class="legend-marker" style="background: #16a085;"></span>
+                    <span>Hutan Kota</span>
+                </div>
+                <hr>
+                <div class="legend-item">
+                    <span class="legend-size legend-size-sm"></span>
+                    <span>Kecil</span>
+                </div>
+                <div class="legend-item">
+                    <span class="legend-size legend-size-md"></span>
+                    <span>Sedang</span>
+                </div>
+                <div class="legend-item">
+                    <span class="legend-size legend-size-lg"></span>
+                    <span>Besar</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Info Panel -->
+        <div class="info-panel" id="infoPanel">
+            <div class="info-panel-header">
+                <h4 id="infoTitle">Informasi RTH</h4>
+                <button class="info-close" id="infoClose">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="info-panel-content" id="infoContent">
+                <p>Klik pada marker untuk melihat informasi detail.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

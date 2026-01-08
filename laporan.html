@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laporan - WebGIS RTH Kota Pekanbaru</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/laporan-review.css">
+</head>
+<body>
+    <!-- ============================================
+         NAVIGATION - TANPA LINK ADMIN
+         User biasa tidak melihat menu Admin
+    ============================================ -->
+    <nav class="navbar scrolled">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <i class="fas fa-leaf"></i>
+                <span>WebGIS RTH Pekanbaru</span>
+            </a>
+            
+            <!-- Menu untuk User Biasa -->
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link"><i class="fas fa-home"></i> Beranda</a></li>
+                <li><a href="peta.html" class="nav-link"><i class="fas fa-map"></i> Peta</a></li>
+                <li><a href="laporan.html" class="nav-link active"><i class="fas fa-file-alt"></i> Laporan</a></li>
+                <li><a href="review.html" class="nav-link"><i class="fas fa-star"></i> Review</a></li>
+            </ul>
+            
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ============================================
+         MAIN CONTENT
+    ============================================ -->
+    <div class="page-container">
+        <!-- Header Halaman -->
+        <div class="page-header">
+            <h1><i class="fas fa-file-alt"></i> Laporan Kondisi RTH</h1>
+            <p>Laporkan kondisi atau masalah pada Ruang Terbuka Hijau di Kota Pekanbaru</p>
+        </div>
+
+        <!-- Container untuk Alert/Notifikasi -->
+        <div id="alertContainer"></div>
+
+        <!-- Tab Navigation -->
+        <div class="tabs-container">
+            <button class="tab-btn active" data-tab="form">
+                <i class="fas fa-plus-circle"></i> Buat Laporan
+            </button>
+            <button class="tab-btn" data-tab="list">
+                <i class="fas fa-list"></i> Daftar Laporan
+            </button>
+        </div>
+
+        <!-- ===== TAB: FORM LAPORAN ===== -->
+        <div id="tab-form" class="tab-content active">
+            <div class="card">
+                <div class="card-header">
+                    <i class="fas fa-edit"></i> Formulir Laporan Baru
+                </div>
+                <div class="card-body">
+                    <form id="formLaporan">
+                        <!-- Nama Pelapor -->
+                        <div class="form-group">
+                            <label><i class="fas fa-user"></i> Nama Pelapor</label>
+                            <input type="text" class="form-control" id="namaPelapor" 
+                                   placeholder="Masukkan nama Anda" required>
+                        </div>
+                        
+                        <!-- Lokasi RTH -->
+                        <div class="form-group">
+                            <label><i class="fas fa-map-marker-alt"></i> Lokasi RTH</label>
+                            <select class="form-select" id="lokasiRth" required>
+                                <option value="">-- Pilih Lokasi RTH --</option>
+                            </select>
+                        </div>
+                        
+                        <!-- Kategori Laporan -->
+                        <div class="form-group">
+                            <label><i class="fas fa-tag"></i> Kategori Laporan</label>
+                            <select class="form-select" id="kategoriLaporan" required>
+                                <option value="">-- Pilih Kategori --</option>
+                                <option value="Sampah Berserakan">Sampah Berserakan</option>
+                                <option value="Fasilitas Rusak">Fasilitas Rusak</option>
+                                <option value="Masalah Keamanan">Masalah Keamanan</option>
+                                <option value="Penerangan Kurang">Penerangan Kurang</option>
+                                <option value="Tanaman Tidak Terawat">Tanaman Tidak Terawat</option>
+                                <option value="Vandalisme">Vandalisme</option>
+                                <option value="Lainnya">Lainnya</option>
+                            </select>
+                        </div>
+                        
+                        <!-- Deskripsi Masalah -->
+                        <div class="form-group">
+                            <label><i class="fas fa-align-left"></i> Deskripsi Masalah</label>
+                            <textarea class="form-control" id="deskripsiMasalah" 
+                                      placeholder="Jelaskan kondisi atau masalah yang Anda temukan..." required></textarea>
+                        </div>
+                        
+                        <!-- Upload Foto -->
+                        <div class="form-group">
+                            <label><i class="fas fa-camera"></i> Foto (Opsional)</label>
+                            <div class="file-upload" id="fileUpload">
+                                <i class="fas fa-cloud-upload-alt"></i>
+                                <p>Klik atau drag file ke sini</p>
+                                <p style="font-size: 0.85rem;">Max 5MB (JPG, PNG)</p>
+                                <input type="file" id="fotoLaporan" accept="image/*">
+                            </div>
+                            <div class="file-preview" id="filePreview"></div>
+                        </div>
+                        
+                        <!-- Tombol Submit -->
+                        <button type="submit" class="btn btn-submit">
+                            <i class="fas fa-paper-plane"></i> Kirim Laporan
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== TAB: DAFTAR LAPORAN ===== -->
+        <div id="tab-list" class="tab-content">
+            <div id="laporanList">
+                <div class="loading">
+                    <div class="spinner"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================
+         FOOTER
+    ============================================ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <i class="fas fa-leaf"></i>
+                    <span>WebGIS RTH Pekanbaru</span>
+                </div>
+                <p>&copy; 2025 Sistem Informasi Geografis RTH Kota Pekanbaru</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============================================
+         SCRIPTS
+    ============================================ -->
+    <!-- Supabase JS Library -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    
+    <!-- Konfigurasi Supabase -->
+    <script src="js/supabase-config.js"></script>
+    
+    <!-- Script Halaman Laporan -->
+    <script src="js/laporan.js"></script>
+</body>
+</html>

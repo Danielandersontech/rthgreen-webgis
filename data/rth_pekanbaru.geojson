@@ -1,0 +1,3784 @@
+{
+  "type": "FeatureCollection",
+  "name": "RTH_Pekanbaru",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 1,
+        "Nama_RTH": "RTH Taman bacaan rumbai",
+        "Jenis_RTH": "Taman Kota",
+        "Luas_m2": 4493.0,
+        "Kls_Luas": "Besar",
+        "Vegetasi": "Pohon",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Tidak Ada",
+        "Penerangan": "Tidak Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.437967,
+          0.545194
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 2,
+        "Nama_RTH": "RTH Taman bawh Leighton I",
+        "Jenis_RTH": "Taman Kota",
+        "Luas_m2": 12251.0,
+        "Kls_Luas": "Sangat Besar",
+        "Vegetasi": "Pohon",
+        "Tmp_Duduk": "Ada",
+        "Tmp_Sampah": "Tidak Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 100,
+        "Kls_Pngnjg": "Sedang"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.437053,
+          0.539753
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 3,
+        "Nama_RTH": "RTH Taman Cinta Raja",
+        "Jenis_RTH": "Taman Kota",
+        "Luas_m2": 1672.0,
+        "Kls_Luas": "Sedang",
+        "Vegetasi": "Pohon",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Tidak Ada",
+        "Penerangan": "Tidak Ada",
+        "Pengunjung": 50,
+        "Kls_Pngnjg": "Sedang"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.453381,
+          0.512858
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 4,
+        "Nama_RTH": "RTH Taman Cut Nyak Dien",
+        "Jenis_RTH": "Taman Kota",
+        "Luas_m2": 1705.0,
+        "Kls_Luas": "Sedang",
+        "Vegetasi": "Pohon",
+        "Tmp_Duduk": "Ada",
+        "Tmp_Sampah": "Tidak Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 700,
+        "Kls_Pngnjg": "Tinggi"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.445481,
+          0.515408
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 5,
+        "Nama_RTH": "RTH Taman Kayu Putih",
+        "Jenis_RTH": "Taman Kota",
+        "Luas_m2": 3970.0,
+        "Kls_Luas": "Besar",
+        "Vegetasi": "Pohon",
+        "Tmp_Duduk": "Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Tidak Ada",
+        "Pengunjung": 100,
+        "Kls_Pngnjg": "Sedang"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.451047,
+          0.51645
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 6,
+        "Nama_RTH": "RTH Taman Komplek Perkantoran Tenayan Raya",
+        "Jenis_RTH": "Taman Kota",
+        "Luas_m2": 1002844.0,
+        "Kls_Luas": "Sangat Besar",
+        "Vegetasi": "Pohon",
+        "Tmp_Duduk": "Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 100,
+        "Kls_Pngnjg": "Sedang"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.539697,
+          0.516761
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 7,
+        "Nama_RTH": "RTH Taman Kota Diponogoro",
+        "Jenis_RTH": "Taman Kota",
+        "Luas_m2": 17228.0,
+        "Kls_Luas": "Sangat Besar",
+        "Vegetasi": "Pohon",
+        "Tmp_Duduk": "Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 200,
+        "Kls_Pngnjg": "Tinggi"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.451614,
+          0.51435
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 8,
+        "Nama_RTH": "RTH Taman Pasar bawah",
+        "Jenis_RTH": "Taman Kota",
+        "Luas_m2": 775.0,
+        "Kls_Luas": "Sedang",
+        "Vegetasi": "Pohon",
+        "Tmp_Duduk": "Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 100,
+        "Kls_Pngnjg": "Sedang"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.443328,
+          0.536981
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 9,
+        "Nama_RTH": "RTH Taman Putri Kaca Mayang",
+        "Jenis_RTH": "Taman Kota",
+        "Luas_m2": 12074.0,
+        "Kls_Luas": "Sangat Besar",
+        "Vegetasi": "Pohon Dan Rumput",
+        "Tmp_Duduk": "Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 500,
+        "Kls_Pngnjg": "Tinggi"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.448339,
+          0.513722
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 10,
+        "Nama_RTH": "RTH Taman Segitiga MTQ",
+        "Jenis_RTH": "Taman Kota",
+        "Luas_m2": 8783.0,
+        "Kls_Luas": "Besar",
+        "Vegetasi": "Pohon",
+        "Tmp_Duduk": "Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 100,
+        "Kls_Pngnjg": "Sedang"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.454028,
+          0.477575
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 11,
+        "Nama_RTH": "RTH Taman Simpang Badak",
+        "Jenis_RTH": "Taman Kota",
+        "Luas_m2": 1687.0,
+        "Kls_Luas": "Sedang",
+        "Vegetasi": "Pohon",
+        "Tmp_Duduk": "Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 100,
+        "Kls_Pngnjg": "Sedang"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.509414,
+          0.506947
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 12,
+        "Nama_RTH": "RTH Taman Sungai Batak",
+        "Jenis_RTH": "Taman Kota",
+        "Luas_m2": 1509.0,
+        "Kls_Luas": "Sedang",
+        "Vegetasi": "Pohon",
+        "Tmp_Duduk": "Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 100,
+        "Kls_Pngnjg": "Sedang"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.467119,
+          0.510997
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 13,
+        "Nama_RTH": "RTH Taman Tuan Kadi",
+        "Jenis_RTH": "Taman Kota",
+        "Luas_m2": 5226.0,
+        "Kls_Luas": "Besar",
+        "Vegetasi": "Pohon",
+        "Tmp_Duduk": "Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 100,
+        "Kls_Pngnjg": "Sedang"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.439822,
+          0.540453
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 14,
+        "Nama_RTH": "RTH Taman Tugu Pesawat depan Auri",
+        "Jenis_RTH": "Taman Kota",
+        "Luas_m2": 1715.0,
+        "Kls_Luas": "Sedang",
+        "Vegetasi": "Pohon",
+        "Tmp_Duduk": "Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 100,
+        "Kls_Pngnjg": "Sedang"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.448081,
+          0.471553
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 15,
+        "Nama_RTH": "RTH Taman Tunjuk Ajar Integritas",
+        "Jenis_RTH": "Taman Kota",
+        "Luas_m2": 13495.0,
+        "Kls_Luas": "Sangat Besar",
+        "Vegetasi": "Pohon Dan Rumput",
+        "Tmp_Duduk": "Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 200,
+        "Kls_Pngnjg": "Tinggi"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.44295,
+          0.535447
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 16,
+        "Nama_RTH": "Hutan Kota Pekanbaru",
+        "Jenis_RTH": "Hutan Kota",
+        "Luas_m2": 61224.0,
+        "Kls_Luas": "Sangat Besar",
+        "Vegetasi": "Pohon",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Tidak Ada",
+        "Penerangan": "Tidak Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.454125,
+          0.5148
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 17,
+        "Nama_RTH": "Jalur Hijau Jl. Arifin ahmad",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 21819.0,
+        "Kls_Luas": "Sangat Besar",
+        "Vegetasi": "Pohon",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.434556,
+          0.480167
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 18,
+        "Nama_RTH": "Jalur Hijau Jl. Bandara Su",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 3654.0,
+        "Kls_Luas": "Besar",
+        "Vegetasi": "Pohon",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.453294,
+          0.470136
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 19,
+        "Nama_RTH": "Jalur Hijau Jl. Bangau sakti",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 6519.0,
+        "Kls_Luas": "Besar",
+        "Vegetasi": "Pohon Dan Semak/Perdu",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.374547,
+          0.465828
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 20,
+        "Nama_RTH": "Jalur Hijau Jl. Cut Nyak Dien",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 6770.0,
+        "Kls_Luas": "Besar",
+        "Vegetasi": "Pohon",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.446111,
+          0.518611
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 21,
+        "Nama_RTH": "Jalur Hijau Jl. Diponegoro",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 9816.0,
+        "Kls_Luas": "Besar",
+        "Vegetasi": "Pohon",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.4525,
+          0.521528
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 22,
+        "Nama_RTH": "Jalur Hijau Jl. HR Subrantas",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 20437.0,
+        "Kls_Luas": "Sangat Besar",
+        "Vegetasi": "Pohon",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.379306,
+          0.464278
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 23,
+        "Nama_RTH": "Jalur Hijau Jl. Jend. Sudirman",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 49157.0,
+        "Kls_Luas": "Sangat Besar",
+        "Vegetasi": "Pohon",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.454456,
+          0.487814
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 24,
+        "Nama_RTH": "Jalur Hijau JL. Melati",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 8970.0,
+        "Kls_Luas": "Besar",
+        "Vegetasi": "Pohon",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.366519,
+          0.482089
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 25,
+        "Nama_RTH": "Jalur Hijau Jl. Naga Sakti",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 12724.0,
+        "Kls_Luas": "Sangat Besar",
+        "Vegetasi": "Pohon Dan Semak/Perdu",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.3945,
+          0.487681
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 26,
+        "Nama_RTH": "Jalur Hijau Jl. Pahlawan kerja",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 3704.0,
+        "Kls_Luas": "Besar",
+        "Vegetasi": "Pohon",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.450244,
+          0.458864
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 27,
+        "Nama_RTH": "Jalur Hijau Jl. Rajawali Sakti",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 10562.0,
+        "Kls_Luas": "Sangat Besar",
+        "Vegetasi": "Pohon",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.396311,
+          0.468761
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 28,
+        "Nama_RTH": "Jalur Hijau Jl. Rajawali Sakti",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 3117.0,
+        "Kls_Luas": "Besar",
+        "Vegetasi": "Pohon",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.433808,
+          0.508825
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 29,
+        "Nama_RTH": "Jalur Hijau JL. Rambutan",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 3939.0,
+        "Kls_Luas": "Besar",
+        "Vegetasi": "Pohon",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.426706,
+          0.470206
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 30,
+        "Nama_RTH": "Jalur Hijau JL. Sembilang",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 6610.0,
+        "Kls_Luas": "Besar",
+        "Vegetasi": "Pohon",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.450164,
+          0.558761
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 31,
+        "Nama_RTH": "Jalur Hijau Jl. SM Amin",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 26222.0,
+        "Kls_Luas": "Sangat Besar",
+        "Vegetasi": "Pohon",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.394389,
+          0.498833
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 32,
+        "Nama_RTH": "Jalur Hijau Jl. Srikandi",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 5064.0,
+        "Kls_Luas": "Besar",
+        "Vegetasi": "Pohon",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.407106,
+          0.481567
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 33,
+        "Nama_RTH": "Jalur Hijau Jl. Sukarno Hatta",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 54076.0,
+        "Kls_Luas": "Sangat Besar",
+        "Vegetasi": "Pohon",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.418333,
+          0.461417
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 34,
+        "Nama_RTH": "Jalur Hijau Jl. Sultan Syarif Qasim",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 5978.0,
+        "Kls_Luas": "Besar",
+        "Vegetasi": "Pohon",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.453667,
+          0.525833
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 35,
+        "Nama_RTH": "Jalur Hijau Jl. T. Tambusai",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 35403.0,
+        "Kls_Luas": "Sangat Besar",
+        "Vegetasi": "Pohon",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.399361,
+          0.498083
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 36,
+        "Nama_RTH": "Jalur Hijau Jl. Yos Sudarso",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 35801.0,
+        "Kls_Luas": "Sangat Besar",
+        "Vegetasi": "Pohon",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.421694,
+          0.60175
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 37,
+        "Nama_RTH": "Jalur Hijau Jl.KH Nasution",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 14682.0,
+        "Kls_Luas": "Sangat Besar",
+        "Vegetasi": "Pohon Dan Semak/Perdu",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.442528,
+          0.430833
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 38,
+        "Nama_RTH": "Jalur Hijau Jl. Sumatra",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 3722.0,
+        "Kls_Luas": "Besar",
+        "Vegetasi": "Pohon",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.450239,
+          0.511772
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 39,
+        "Nama_RTH": "Jalur Hijau Jl. Dr. Sutomo",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 1888.0,
+        "Kls_Luas": "Sedang",
+        "Vegetasi": "Pohon",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.456417,
+          0.525558
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 40,
+        "Nama_RTH": "Jalur Hijau Jl. Karya Bersama",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 391.0,
+        "Kls_Luas": "Kecil",
+        "Vegetasi": "Pohon",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.480539,
+          0.545744
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 41,
+        "Nama_RTH": "Jalur Hijau Jl. Kp. Baru",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 1715.0,
+        "Kls_Luas": "Sedang",
+        "Vegetasi": "Pohon",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.478728,
+          0.549728
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 42,
+        "Nama_RTH": "Jalur Hijau Jl. Letjend S Parman",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 108.0,
+        "Kls_Luas": "Kecil",
+        "Vegetasi": "Pohon",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.458467,
+          0.51715
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 43,
+        "Nama_RTH": "Jalur Hijau Jl. MH Thamrin",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 1999.0,
+        "Kls_Luas": "Sedang",
+        "Vegetasi": "Pohon",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.453864,
+          0.516144
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 44,
+        "Nama_RTH": "Jalur Hijau Jl. Petalabumi",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 833.0,
+        "Kls_Luas": "Sedang",
+        "Vegetasi": "Pohon",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.455194,
+          0.518956
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 45,
+        "Nama_RTH": "Jalur Hijau Jl. Ronggo Warsito",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 2251.0,
+        "Kls_Luas": "Besar",
+        "Vegetasi": "Pohon",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.456361,
+          0.5132
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 46,
+        "Nama_RTH": "Jalur Hijau Jl. Rusunawa Rejosari",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 627.0,
+        "Kls_Luas": "Sedang",
+        "Vegetasi": "Pohon",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.479811,
+          0.549117
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 47,
+        "Nama_RTH": "Jalur Hijau Jl. Sumber Sari",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 789.0,
+        "Kls_Luas": "Sedang",
+        "Vegetasi": "Pohon",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.463583,
+          0.540217
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 48,
+        "Nama_RTH": "Jalur Hijau Jl. Sumber Sari I",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 3481.0,
+        "Kls_Luas": "Besar",
+        "Vegetasi": "Pohon Dan Semak/Perdu",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.472008,
+          0.543942
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 49,
+        "Nama_RTH": "Jalur Hijau Jl. Tanjung Datuk",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 2323.0,
+        "Kls_Luas": "Besar",
+        "Vegetasi": "Pohon",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.454589,
+          0.538039
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 50,
+        "Nama_RTH": "Jalur Hijau Jl. Tenayan Jaya",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 2173.0,
+        "Kls_Luas": "Besar",
+        "Vegetasi": "Pohon",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.492478,
+          0.543936
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 51,
+        "Nama_RTH": "Jalur Hijau Jl. Air Hitam",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 3834.0,
+        "Kls_Luas": "Besar",
+        "Vegetasi": "Pohon",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.384525,
+          0.502597
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 52,
+        "Nama_RTH": "Jalur Hijau Jl. Datuk Setia Maharaja",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 5435.0,
+        "Kls_Luas": "Besar",
+        "Vegetasi": "Pohon Dan Semak/Perdu",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.454322,
+          0.481183
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 53,
+        "Nama_RTH": "Jalur Hijau Jl. Datuk Wan Abdul Jamal",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 3258.0,
+        "Kls_Luas": "Besar",
+        "Vegetasi": "Pohon",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.457103,
+          0.480939
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 54,
+        "Nama_RTH": "Jalur Hijau Jl. Gajah Mada",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 2345.0,
+        "Kls_Luas": "Besar",
+        "Vegetasi": "Pohon Dan Semak/Perdu",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.452169,
+          0.517589
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 55,
+        "Nama_RTH": "Jalur Hijau Jl. Hangtuah",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 11575.0,
+        "Kls_Luas": "Sangat Besar",
+        "Vegetasi": "Pohon",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.447778,
+          0.525331
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 56,
+        "Nama_RTH": "Jalur Hijau Jl. Juanda",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 242.0,
+        "Kls_Luas": "Kecil",
+        "Vegetasi": "Pohon",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.447414,
+          0.535897
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 57,
+        "Nama_RTH": "Jalur Hijau Jl. Labersa",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 10589.0,
+        "Kls_Luas": "Sangat Besar",
+        "Vegetasi": "Pohon",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.468569,
+          0.478256
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 58,
+        "Nama_RTH": "Jalur Hijau Jl. Parit Indah",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 7084.0,
+        "Kls_Luas": "Besar",
+        "Vegetasi": "Pohon",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.468656,
+          0.478342
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 59,
+        "Nama_RTH": "Jalur Hijau Jl. Pattimura",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 974.0,
+        "Kls_Luas": "Sedang",
+        "Vegetasi": "Pohon",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.449811,
+          0.509636
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 60,
+        "Nama_RTH": "Jalur Hijau Jl. Pesantren",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 15290.0,
+        "Kls_Luas": "Sangat Besar",
+        "Vegetasi": "Pohon",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.487011,
+          0.475733
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 61,
+        "Nama_RTH": "Jalur Hijau Jl. Rawamangun",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 3777.0,
+        "Kls_Luas": "Besar",
+        "Vegetasi": "Pohon",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.468494,
+          0.478756
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 62,
+        "Nama_RTH": "Jalur Hijau Jl. Riau",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 4598.0,
+        "Kls_Luas": "Besar",
+        "Vegetasi": "Pohon",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.442969,
+          0.535961
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 63,
+        "Nama_RTH": "Jalur Hijau Jl. Setia Budi",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 2249.0,
+        "Kls_Luas": "Besar",
+        "Vegetasi": "Tanaman Hias",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.456436,
+          0.535844
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 64,
+        "Nama_RTH": "Jalur Hijau Jl. Sisingamangaraja",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 978.0,
+        "Kls_Luas": "Sedang",
+        "Vegetasi": "Pohon",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.454842,
+          0.528317
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 65,
+        "Nama_RTH": "Jalur Hijau Jl. Abdul malik",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 927.0,
+        "Kls_Luas": "Sedang",
+        "Vegetasi": "Semak/Perdu",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.504525,
+          0.509617
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 66,
+        "Nama_RTH": "Jalur Hijau Jl. Ade Irma Suryani",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 61.0,
+        "Kls_Luas": "Kecil",
+        "Vegetasi": "Pohon",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.449025,
+          0.522942
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 67,
+        "Nama_RTH": "Jalur Hijau Jl. Ahmad Yani",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 1212.0,
+        "Kls_Luas": "Sedang",
+        "Vegetasi": "Pohon",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.444117,
+          0.519281
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 68,
+        "Nama_RTH": "Jalur Hijau Jl. Amal Bakti",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 150.0,
+        "Kls_Luas": "Kecil",
+        "Vegetasi": "Pohon",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.429075,
+          0.505117
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 69,
+        "Nama_RTH": "Jalur Hijau Jl. Amal Mulia",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 87.0,
+        "Kls_Luas": "Kecil",
+        "Vegetasi": "Pohon",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.4239,
+          0.50335
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 70,
+        "Nama_RTH": "Jalur Hijau Jl. Angrek Putih",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 80.0,
+        "Kls_Luas": "Kecil",
+        "Vegetasi": "Pohon",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.454694,
+          0.504089
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 71,
+        "Nama_RTH": "Jalur Hijau Jl. Ash-Shofa",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 2834.0,
+        "Kls_Luas": "Besar",
+        "Vegetasi": "Semak/Perdu",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.397167,
+          0.502347
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 72,
+        "Nama_RTH": "Jalur Hijau Jl. Badak ujung",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 3347.0,
+        "Kls_Luas": "Besar",
+        "Vegetasi": "Pohon",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.518444,
+          0.507472
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 73,
+        "Nama_RTH": "Jalur Hijau Jl. Bambu Kuning",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 271.0,
+        "Kls_Luas": "Kecil",
+        "Vegetasi": "Pohon",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.469608,
+          0.528867
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 74,
+        "Nama_RTH": "Jalur Hijau Jl. Bambu Kuning II",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 277.0,
+        "Kls_Luas": "Kecil",
+        "Vegetasi": "Pohon",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.473333,
+          0.528539
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 75,
+        "Nama_RTH": "Jalur Hijau Jl. Bima",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 627.0,
+        "Kls_Luas": "Sedang",
+        "Vegetasi": "Pohon",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.400736,
+          0.496572
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 76,
+        "Nama_RTH": "Jalur Hijau Jl. Brigjen Katamso",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 107.0,
+        "Kls_Luas": "Kecil",
+        "Vegetasi": "Pohon",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.457225,
+          0.503108
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 77,
+        "Nama_RTH": "Jalur Hijau Jl. Budi Luhur",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 668.0,
+        "Kls_Luas": "Sedang",
+        "Vegetasi": "Pohon",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.413106,
+          0.484056
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 78,
+        "Nama_RTH": "Jalur Hijau Jl. Bundo Kandung",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 1091.0,
+        "Kls_Luas": "Sedang",
+        "Vegetasi": "Semak/Perdu",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.413106,
+          0.503867
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 79,
+        "Nama_RTH": "Jalur Hijau Jl. Cimpedak",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 183.0,
+        "Kls_Luas": "Kecil",
+        "Vegetasi": "Pohon",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.449381,
+          0.505769
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 80,
+        "Nama_RTH": "Jalur Hijau Jl. Gulama",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 690.0,
+        "Kls_Luas": "Sedang",
+        "Vegetasi": "Pohon",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.426533,
+          0.496658
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 81,
+        "Nama_RTH": "Jalur Hijau Jl. Harapan Utama",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 1831.0,
+        "Kls_Luas": "Sedang",
+        "Vegetasi": "Semak/Perdu",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.408689,
+          0.495356
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 82,
+        "Nama_RTH": "Jalur Hijau Jl. Hasanuddin",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 663.0,
+        "Kls_Luas": "Sedang",
+        "Vegetasi": "Pohon",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.452994,
+          0.533258
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 83,
+        "Nama_RTH": "Jalur Hijau Jl. HK. Ahmad Dahlan",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 734.0,
+        "Kls_Luas": "Sedang",
+        "Vegetasi": "Pohon",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.437772,
+          0.518917
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 84,
+        "Nama_RTH": "Jalur Hijau Jl. HOS. Cokroaminoto",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 100.0,
+        "Kls_Luas": "Kecil",
+        "Vegetasi": "Pohon",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.446442,
+          0.529839
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 85,
+        "Nama_RTH": "Jalur Hijau Jl. Ibrahim Sattah",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 206.0,
+        "Kls_Luas": "Kecil",
+        "Vegetasi": "Pohon",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.454078,
+          0.504122
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 86,
+        "Nama_RTH": "Jalur Hijau Jl. Ikhlas",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 254.0,
+        "Kls_Luas": "Kecil",
+        "Vegetasi": "Pohon",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.429814,
+          0.507036
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 87,
+        "Nama_RTH": "Jalur Hijau Jl. Indra Puri",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 1454.0,
+        "Kls_Luas": "Sedang",
+        "Vegetasi": "Pohon",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.490122,
+          0.522056
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 88,
+        "Nama_RTH": "Jalur Hijau Jl. Jend Gatot Subroto",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 663.0,
+        "Kls_Luas": "Sedang",
+        "Vegetasi": "Pohon",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.453136,
+          0.529792
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 89,
+        "Nama_RTH": "Jalur Hijau Jl. Kartini",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 600.0,
+        "Kls_Luas": "Sedang",
+        "Vegetasi": "Pohon",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.449803,
+          0.520664
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 90,
+        "Nama_RTH": "Jalur Hijau Jl. Karya Bakti",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 813.0,
+        "Kls_Luas": "Sedang",
+        "Vegetasi": "Pohon",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.480167,
+          0.537567
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 91,
+        "Nama_RTH": "Jalur Hijau Jl. Kinibalu",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 274.0,
+        "Kls_Luas": "Kecil",
+        "Vegetasi": "Pohon",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.459153,
+          0.526939
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 92,
+        "Nama_RTH": "Jalur Hijau Jl. Kuantan II",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 227.0,
+        "Kls_Luas": "Kecil",
+        "Vegetasi": "Pohon",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.459097,
+          0.529889
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 93,
+        "Nama_RTH": "Jalur Hijau Jl. Kuau",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 95.0,
+        "Kls_Luas": "Kecil",
+        "Vegetasi": "Pohon",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.437894,
+          0.508989
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 94,
+        "Nama_RTH": "Jalur Hijau Jl. Lele",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 475.0,
+        "Kls_Luas": "Kecil",
+        "Vegetasi": "Pohon",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.421747,
+          0.498272
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 95,
+        "Nama_RTH": "Jalur Hijau Jl. Letkol Hasan Basri",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 358.0,
+        "Kls_Luas": "Kecil",
+        "Vegetasi": "Pohon",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.452083,
+          0.507689
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 96,
+        "Nama_RTH": "Jalur Hijau Jl. Letkol Syariefuddin Syarif",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 575.0,
+        "Kls_Luas": "Sedang",
+        "Vegetasi": "Pohon",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.452564,
+          0.488025
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 97,
+        "Nama_RTH": "Jalur Hijau Jl. Merpati",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 190.0,
+        "Kls_Luas": "Kecil",
+        "Vegetasi": "Pohon",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.453881,
+          0.495639
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 98,
+        "Nama_RTH": "Jalur Hijau Jl. Mulya Sari",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 917.0,
+        "Kls_Luas": "Sedang",
+        "Vegetasi": "Pohon Dan Semak/Perdu",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.457247,
+          0.485303
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 99,
+        "Nama_RTH": "Jalur Hijau Jl. Mustafa Sari",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 1044.0,
+        "Kls_Luas": "Sedang",
+        "Vegetasi": "Pohon",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.459506,
+          0.482778
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 100,
+        "Nama_RTH": "Jalur Hijau Jl. Pembangunan",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 259.0,
+        "Kls_Luas": "Kecil",
+        "Vegetasi": "Pohon",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.430722,
+          0.511072
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 101,
+        "Nama_RTH": "Jalur Hijau Jl. Pemuda",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 130.0,
+        "Kls_Luas": "Kecil",
+        "Vegetasi": "Pohon",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.479611,
+          0.520933
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 102,
+        "Nama_RTH": "Jalur Hijau Jl. Pendopo",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 241.0,
+        "Kls_Luas": "Kecil",
+        "Vegetasi": "Pohon",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.479069,
+          0.521706
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 103,
+        "Nama_RTH": "Jalur Hijau Jl. Pepaya",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 340.0,
+        "Kls_Luas": "Kecil",
+        "Vegetasi": "Pohon",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.444503,
+          0.515292
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 104,
+        "Nama_RTH": "Jalur Hijau Jl. Perhubungan",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 423.0,
+        "Kls_Luas": "Kecil",
+        "Vegetasi": "Pohon",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.452425,
+          0.463636
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 105,
+        "Nama_RTH": "Jalur Hijau Jl. Perwira",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 623.0,
+        "Kls_Luas": "Sedang",
+        "Vegetasi": "Pohon",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.475208,
+          0.535775
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 106,
+        "Nama_RTH": "Jalur Hijau Jl. Pesisir",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 1552.0,
+        "Kls_Luas": "Sedang",
+        "Vegetasi": "Pohon",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.449172,
+          0.543117
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 107,
+        "Nama_RTH": "Jalur Hijau Jl. Pinang",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 157.0,
+        "Kls_Luas": "Kecil",
+        "Vegetasi": "Pohon",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.448917,
+          0.502967
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 108,
+        "Nama_RTH": "Jalur Hijau Jl. Purti Malu",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 119.0,
+        "Kls_Luas": "Kecil",
+        "Vegetasi": "Pohon",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.440508,
+          0.508456
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 109,
+        "Nama_RTH": "Jalur Hijau Jl. Putri Indah",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 787.0,
+        "Kls_Luas": "Sedang",
+        "Vegetasi": "Pohon Dan Semak/Perdu",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.456425,
+          0.473519
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 110,
+        "Nama_RTH": "Jalur Hijau Jl. Puyuh",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 189.0,
+        "Kls_Luas": "Kecil",
+        "Vegetasi": "Pohon",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.433442,
+          0.507181
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 111,
+        "Nama_RTH": "Jalur Hijau Jl. Sail",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 808.0,
+        "Kls_Luas": "Sedang",
+        "Vegetasi": "Pohon",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.480364,
+          0.530619
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 112,
+        "Nama_RTH": "Jalur Hijau Jl. Sariamin",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 204.0,
+        "Kls_Luas": "Kecil",
+        "Vegetasi": "Pohon",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.453444,
+          0.505439
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 113,
+        "Nama_RTH": "Jalur Hijau Jl. Satria",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 972.0,
+        "Kls_Luas": "Sedang",
+        "Vegetasi": "Pohon",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.47245,
+          0.532475
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 114,
+        "Nama_RTH": "Jalur Hijau Jl. Satria Kuantan Regensi",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 5893.0,
+        "Kls_Luas": "Besar",
+        "Vegetasi": "Pohon",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.468225,
+          0.536336
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 115,
+        "Nama_RTH": "Jalur Hijau Jl. Sekuntum",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 357.0,
+        "Kls_Luas": "Kecil",
+        "Vegetasi": "Pohon Dan Semak/Perdu",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.503567,
+          0.500622
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 116,
+        "Nama_RTH": "Jalur Hijau Jl. Singgalang",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 1123.0,
+        "Kls_Luas": "Sedang",
+        "Vegetasi": "Pohon",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.508069,
+          0.482328
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 117,
+        "Nama_RTH": "Jalur Hijau Jl. Sumatra",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 586.0,
+        "Kls_Luas": "Sedang",
+        "Vegetasi": "Pohon",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.48865,
+          0.508256
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 118,
+        "Nama_RTH": "Jalur Hijau Jl. Taman Sari",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 296.0,
+        "Kls_Luas": "Kecil",
+        "Vegetasi": "Pohon",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.457964,
+          0.488867
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 119,
+        "Nama_RTH": "Jalur Hijau Jl. Tengku Zainal Abidin",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 575.0,
+        "Kls_Luas": "Sedang",
+        "Vegetasi": "Pohon",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.45205,
+          0.530583
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 120,
+        "Nama_RTH": "Jalur Hijau Jl. Teuku Umar",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 357.0,
+        "Kls_Luas": "Kecil",
+        "Vegetasi": "Pohon",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.453036,
+          0.532186
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 121,
+        "Nama_RTH": "Jalur Hijau Jl. Tj. Batu",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 1404.0,
+        "Kls_Luas": "Sedang",
+        "Vegetasi": "Pohon",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.453419,
+          0.541133
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 122,
+        "Nama_RTH": "Jalur Hijau Jl. Utama",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 372.0,
+        "Kls_Luas": "Kecil",
+        "Vegetasi": "Pohon",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.476736,
+          0.520158
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 123,
+        "Nama_RTH": "Jalur Hijau Jl. Wonosari",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 120.0,
+        "Kls_Luas": "Kecil",
+        "Vegetasi": "Pohon",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.456775,
+          0.492439
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 124,
+        "Nama_RTH": "Jalur Hijau Jl.Gunungn Sahilan",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 117.0,
+        "Kls_Luas": "Kecil",
+        "Vegetasi": "Pohon",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.462192,
+          0.526106
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 125,
+        "Nama_RTH": "Jalur Hijau Jl. Datuk Setia Maharaja",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 5435.0,
+        "Kls_Luas": "Besar",
+        "Vegetasi": "Pohon",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.454322,
+          0.481183
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 126,
+        "Nama_RTH": "Jalur Hijau Jl. Datuk Wan Abdul Jamal",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 3258.0,
+        "Kls_Luas": "Besar",
+        "Vegetasi": "Pohon",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.457103,
+          0.480939
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 127,
+        "Nama_RTH": "Jalur Hijau Jl. Guru Sulaiman",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 2535.0,
+        "Kls_Luas": "Besar",
+        "Vegetasi": "Pohon",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.427692,
+          0.534983
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 128,
+        "Nama_RTH": "Jalur Hijau Jl. Kartika Sari",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 2088.0,
+        "Kls_Luas": "Besar",
+        "Vegetasi": "Pohon",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.421375,
+          0.570058
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 129,
+        "Nama_RTH": "Jalur Hijau Jl. Karya Bersama",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 283.0,
+        "Kls_Luas": "Kecil",
+        "Vegetasi": "Pohon",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.480167,
+          0.537567
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 130,
+        "Nama_RTH": "Jalur Hijau Jl. Kulim",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 829.0,
+        "Kls_Luas": "Sedang",
+        "Vegetasi": "Pohon",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.433383,
+          0.535317
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 131,
+        "Nama_RTH": "Jalur Hijau Jl. Labersa",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 10589.0,
+        "Kls_Luas": "Sangat Besar",
+        "Vegetasi": "Pohon",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.468569,
+          0.478256
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 132,
+        "Nama_RTH": "Jalur Hijau Jl. Panglima Undan",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 1086.0,
+        "Kls_Luas": "Sedang",
+        "Vegetasi": "Pohon",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.438531,
+          0.536961
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 133,
+        "Nama_RTH": "Jalur Hijau Jl. Parit Indah",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 7084.0,
+        "Kls_Luas": "Besar",
+        "Vegetasi": "Pohon",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.468656,
+          0.478342
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 134,
+        "Nama_RTH": "Jalur Hijau Jl. Pesantren",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 15290.0,
+        "Kls_Luas": "Sangat Besar",
+        "Vegetasi": "Pohon",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.487011,
+          0.475733
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 135,
+        "Nama_RTH": "Jalur Hijau Jl. Rambutan",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 502.0,
+        "Kls_Luas": "Sedang",
+        "Vegetasi": "Pohon",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.412219,
+          0.535047
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 136,
+        "Nama_RTH": "Jalur Hijau Jl. Rawamangun",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 3777.0,
+        "Kls_Luas": "Besar",
+        "Vegetasi": "Pohon",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.468494,
+          0.478756
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 137,
+        "Nama_RTH": "Jalur Hijau Jl. Sekolah",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 4361.0,
+        "Kls_Luas": "Besar",
+        "Vegetasi": "Pohon",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.449328,
+          0.560456
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 138,
+        "Nama_RTH": "Jalur Hijau Jl. Sembilang",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 15508.0,
+        "Kls_Luas": "Sangat Besar",
+        "Vegetasi": "Pohon",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.450067,
+          0.558903
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 139,
+        "Nama_RTH": "Jalur Hijau Jl. Senapelan",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 256.0,
+        "Kls_Luas": "Kecil",
+        "Vegetasi": "Pohon",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.443067,
+          0.536753
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 140,
+        "Nama_RTH": "Jalur Hijau Jl. Sungai Kampar",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 803.0,
+        "Kls_Luas": "Sedang",
+        "Vegetasi": "Pohon",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.465883,
+          0.533408
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 141,
+        "Nama_RTH": "Jalur Hijau Jl. Umban Sari",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 14159.0,
+        "Kls_Luas": "Sangat Besar",
+        "Vegetasi": "Pohon Dan Semak/Perdu",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.429589,
+          0.569208
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 142,
+        "Nama_RTH": "Jalur Hijau Jl. Enggano",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 833.0,
+        "Kls_Luas": "Sedang",
+        "Vegetasi": "Pohon",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.451208,
+          0.511522
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 143,
+        "Nama_RTH": "Bundaran Air Hitam",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 565.0,
+        "Kls_Luas": "Sedang",
+        "Vegetasi": "Pohon",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.394,
+          0.510919
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 144,
+        "Nama_RTH": "Bundaran Selamat Datang",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 657.0,
+        "Kls_Luas": "Sedang",
+        "Vegetasi": "Pohon",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.384806,
+          0.502789
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 145,
+        "Nama_RTH": "Simpang Palas/ simpang Bingung",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 888.0,
+        "Kls_Luas": "Sedang",
+        "Vegetasi": "Pohon",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.424403,
+          0.603033
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 146,
+        "Nama_RTH": "Tugu Bambu Runcing",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 534.0,
+        "Kls_Luas": "Sedang",
+        "Vegetasi": "Pohon Dan Semak/Perdu",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.452639,
+          0.525306
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 147,
+        "Nama_RTH": "Tugu Gemar Menabung",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 1160.0,
+        "Kls_Luas": "Sedang",
+        "Vegetasi": "Pohon Dan Semak/Perdu",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.403694,
+          0.535333
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 148,
+        "Nama_RTH": "Tugu Keris",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 685.0,
+        "Kls_Luas": "Sedang",
+        "Vegetasi": "Semak/Perdu Dan Tanaman Hias",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.452111,
+          0.51025
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 149,
+        "Nama_RTH": "Tugu Kompang",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 746.0,
+        "Kls_Luas": "Sedang",
+        "Vegetasi": "Pohon Dan Semak/Perdu",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.430028,
+          0.569417
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 150,
+        "Nama_RTH": "Tugu Selais/ Air Mancur Tugu Selais",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 647.0,
+        "Kls_Luas": "Sedang",
+        "Vegetasi": "Pohon Dan Rumput",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.447917,
+          0.513083
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 151,
+        "Nama_RTH": "Tugu Songket",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 632.0,
+        "Kls_Luas": "Sedang",
+        "Vegetasi": "Semak/Perdu Dan Pohon",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.394472,
+          0.497444
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 152,
+        "Nama_RTH": "Tugu Tepak Sirih",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 112.0,
+        "Kls_Luas": "Kecil",
+        "Vegetasi": "Semak/Perdu Dan Pohon",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.454083,
+          0.470861
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 153,
+        "Nama_RTH": "Tugu Zapin",
+        "Jenis_RTH": "Jalur Hijau Di Jalan",
+        "Luas_m2": 639.0,
+        "Kls_Luas": "Sedang",
+        "Vegetasi": "Semak/Perdu",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.447444,
+          0.517667
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 154,
+        "Nama_RTH": "Nurseri MayangTerurai I",
+        "Jenis_RTH": "Kebun Bibit",
+        "Luas_m2": 6000.0,
+        "Kls_Luas": "Besar",
+        "Vegetasi": "Pohon",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.459139,
+          0.476139
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 155,
+        "Nama_RTH": "Nurseri MayangTerurai II",
+        "Jenis_RTH": "Kebun Bibit",
+        "Luas_m2": 37000.0,
+        "Kls_Luas": "Sangat Besar",
+        "Vegetasi": "Pohon",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 0,
+        "Kls_Pngnjg": "Tidak Ada"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.407806,
+          0.606167
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 156,
+        "Nama_RTH": "EKORIPARIAN UNIVERSITAS LANCANG KUNING",
+        "Jenis_RTH": "Taman",
+        "Luas_m2": 762.0,
+        "Kls_Luas": "Sedang",
+        "Vegetasi": "Pohon dan Rumput",
+        "Tmp_Duduk": "Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Tidak Ada",
+        "Pengunjung": 200,
+        "Kls_Pngnjg": "Sedang"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.427036,
+          0.578614
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 157,
+        "Nama_RTH": "Bundaran PHR Rumbai",
+        "Jenis_RTH": "Taman",
+        "Luas_m2": 350.0,
+        "Kls_Luas": "Kecil",
+        "Vegetasi": "Pohon dan Rumput",
+        "Tmp_Duduk": "Tidak Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Tidak Ada",
+        "Pengunjung": 300,
+        "Kls_Pngnjg": "Sedang"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.446292,
+          0.571219
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 158,
+        "Nama_RTH": "Taman Olahraga PCR Rumbai",
+        "Jenis_RTH": "Taman",
+        "Luas_m2": 400.0,
+        "Kls_Luas": "Kecil",
+        "Vegetasi": "Pohon dan Rumput",
+        "Tmp_Duduk": "Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Tidak Ada",
+        "Pengunjung": 150,
+        "Kls_Pngnjg": "Rendah"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.428769,
+          0.570156
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 159,
+        "Nama_RTH": "Taman danau Unri",
+        "Jenis_RTH": "Taman",
+        "Luas_m2": 500.0,
+        "Kls_Luas": "Sedang",
+        "Vegetasi": "Pohon dan Rumput",
+        "Tmp_Duduk": "Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Tidak Ada",
+        "Pengunjung": 500,
+        "Kls_Pngnjg": "Tinggi"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.382703,
+          0.476628
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 160,
+        "Nama_RTH": "PEKANBARU CITY PARK",
+        "Jenis_RTH": "Taman",
+        "Luas_m2": 319.0,
+        "Kls_Luas": "Kecil",
+        "Vegetasi": "Pohon",
+        "Tmp_Duduk": "Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 400,
+        "Kls_Pngnjg": "Sedang"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.451492,
+          0.516075
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 161,
+        "Nama_RTH": "Alam Mayang",
+        "Jenis_RTH": "Taman",
+        "Luas_m2": 240.0,
+        "Kls_Luas": "Kecil",
+        "Vegetasi": "Pohon",
+        "Tmp_Duduk": "Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Tidak Ada",
+        "Pengunjung": 400,
+        "Kls_Pngnjg": "Sedang"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.500661,
+          0.497975
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 162,
+        "Nama_RTH": "Taman Bunga Impian",
+        "Jenis_RTH": "Taman",
+        "Luas_m2": 200.0,
+        "Kls_Luas": "Kecil",
+        "Vegetasi": "Tanaman hias dan pohon",
+        "Tmp_Duduk": "Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 200,
+        "Kls_Pngnjg": "Sedang"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.530433,
+          0.578892
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 163,
+        "Nama_RTH": "Taman AEROSPORT Pekanbaru",
+        "Jenis_RTH": "Taman",
+        "Luas_m2": 400.0,
+        "Kls_Luas": "Kecil",
+        "Vegetasi": "Pohon dan Rumput",
+        "Tmp_Duduk": "Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Ada",
+        "Pengunjung": 800,
+        "Kls_Pngnjg": "Tinggi"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.486686,
+          0.581958
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 164,
+        "Nama_RTH": "Rindu sempadan",
+        "Jenis_RTH": "Taman",
+        "Luas_m2": 300.0,
+        "Kls_Luas": "Kecil",
+        "Vegetasi": "Pohon",
+        "Tmp_Duduk": "Ada",
+        "Tmp_Sampah": "Ada",
+        "Penerangan": "Tidak Ada",
+        "Pengunjung": 200,
+        "Kls_Pngnjg": "Sedang"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.425258,
+          0.672544
+        ]
+      }
+    }
+  ]
+}

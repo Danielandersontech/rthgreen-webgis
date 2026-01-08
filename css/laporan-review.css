@@ -1,0 +1,854 @@
+/* ============================================
+   LAPORAN-REVIEW.CSS
+   Styling untuk halaman Laporan, Review, dan Admin
+   WebGIS RTH Kota Pekanbaru
+============================================ */
+
+/* ============================================
+   PAGE CONTAINER
+   Wrapper utama untuk konten halaman
+============================================ */
+.page-container {
+    max-width: 1200px;       /* Lebar maksimal konten */
+    margin: 0 auto;          /* Tengahkan konten */
+    padding: 100px 20px 40px; /* Padding atas untuk navbar fixed */
+    min-height: 100vh;       /* Minimal tinggi layar penuh */
+}
+
+/* ===== PAGE HEADER =====
+   Judul dan deskripsi halaman
+*/
+.page-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.page-header h1 {
+    font-size: 2.2rem;
+    color: var(--dark);
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* Icon di judul */
+.page-header h1 i {
+    color: var(--primary);
+}
+
+/* Deskripsi halaman */
+.page-header p {
+    color: var(--text-light);
+    font-size: 1.1rem;
+}
+
+/* ============================================
+   TABS NAVIGATION
+   Tab untuk berpindah antar konten
+============================================ */
+.tabs-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+    border-bottom: 2px solid var(--light);
+    padding-bottom: 0;
+    flex-wrap: wrap;  /* Wrap di mobile */
+}
+
+/* Tombol tab */
+.tab-btn {
+    padding: 12px 25px;
+    background: transparent;
+    border: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-light);
+    cursor: pointer;
+    position: relative;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Hover tab */
+.tab-btn:hover {
+    color: var(--primary);
+}
+
+/* Tab aktif */
+.tab-btn.active {
+    color: var(--primary);
+}
+
+/* Garis bawah tab aktif */
+.tab-btn.active::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--primary);
+    border-radius: 3px 3px 0 0;
+}
+
+/* Konten tab - tersembunyi default */
+.tab-content {
+    display: none;
+}
+
+/* Konten tab aktif */
+.tab-content.active {
+    display: block;
+    animation: fadeIn 0.3s ease;
+}
+
+/* Animasi fade in */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ============================================
+   CARDS
+   Card untuk menampung konten
+============================================ */
+.card {
+    background: var(--white);
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    margin-bottom: 25px;
+}
+
+/* Header card - dengan gradient hijau */
+.card-header {
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    color: var(--white);
+    padding: 15px 20px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Body card */
+.card-body {
+    padding: 25px;
+}
+
+/* ============================================
+   FORM ELEMENTS
+   Elemen-elemen form
+============================================ */
+
+/* Group form - wrapper untuk label dan input */
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* Label form */
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: var(--dark);
+}
+
+/* Icon di label */
+.form-group label i {
+    margin-right: 8px;
+    color: var(--primary);
+}
+
+/* Input text dan textarea */
+.form-control {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid var(--light);
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    transition: var(--transition);
+    background: var(--white);
+}
+
+/* Focus state input */
+.form-control:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(39, 174, 96, 0.1);
+}
+
+/* Select dropdown */
+.form-select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid var(--light);
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    background: var(--white);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.form-select:focus {
+    outline: none;
+    border-color: var(--primary);
+}
+
+/* Textarea */
+textarea.form-control {
+    min-height: 120px;
+    resize: vertical;  /* Hanya resize vertikal */
+}
+
+/* ============================================
+   FILE UPLOAD
+   Area upload file dengan drag & drop
+============================================ */
+.file-upload {
+    border: 2px dashed var(--light);
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    cursor: pointer;
+    transition: var(--transition);
+    background: #fafafa;
+}
+
+/* Hover file upload */
+.file-upload:hover {
+    border-color: var(--primary);
+    background: rgba(39, 174, 96, 0.05);
+}
+
+/* Icon upload */
+.file-upload i {
+    font-size: 2.5rem;
+    color: var(--text-light);
+    margin-bottom: 10px;
+}
+
+.file-upload p {
+    color: var(--text-light);
+    margin: 0;
+}
+
+/* Sembunyikan input file asli */
+.file-upload input[type="file"] {
+    display: none;
+}
+
+/* Preview file yang diupload */
+.file-preview {
+    margin-top: 15px;
+}
+
+.file-preview img {
+    max-width: 200px;
+    max-height: 150px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* Nama file */
+.file-preview .file-name {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 15px;
+    background: var(--light);
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+.file-preview .file-name i {
+    color: var(--primary);
+    font-size: 1rem;
+}
+
+/* Tombol hapus file */
+.file-preview .remove-file {
+    margin-left: auto;
+    color: #e74c3c;
+    cursor: pointer;
+}
+
+/* ============================================
+   RATING INPUT
+   Input rating bintang interaktif
+============================================ */
+.rating-input {
+    display: flex;
+    gap: 8px;
+    flex-direction: row-reverse;  /* Reverse untuk CSS trick */
+    justify-content: flex-end;
+}
+
+/* Sembunyikan radio button asli */
+.rating-input input {
+    display: none;
+}
+
+/* Label bintang */
+.rating-input label {
+    cursor: pointer;
+    font-size: 2rem;
+    color: #ddd;
+    transition: var(--transition);
+}
+
+/* Hover dan checked state - CSS sibling selector trick */
+.rating-input label:hover,
+.rating-input label:hover ~ label,
+.rating-input input:checked ~ label {
+    color: #f1c40f;  /* Warna kuning emas */
+}
+
+/* ============================================
+   RATING DISPLAY
+   Menampilkan rating bintang (read-only)
+============================================ */
+.rating-display {
+    display: flex;
+    gap: 3px;
+}
+
+/* Bintang terisi */
+.rating-display i {
+    color: #f1c40f;
+    font-size: 1rem;
+}
+
+/* Bintang kosong */
+.rating-display i.empty {
+    color: #ddd;
+}
+
+/* ============================================
+   BUTTONS
+   Berbagai jenis tombol
+============================================ */
+.btn {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Tombol submit - full width dengan gradient */
+.btn-submit {
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    color: var(--white);
+    width: 100%;
+    justify-content: center;
+    padding: 15px;
+}
+
+.btn-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+/* Tombol kecil */
+.btn-sm {
+    padding: 6px 12px;
+    font-size: 0.85rem;
+}
+
+/* Variasi warna tombol */
+.btn-info {
+    background: var(--secondary);
+    color: var(--white);
+}
+
+.btn-warning {
+    background: #f39c12;
+    color: var(--white);
+}
+
+.btn-success {
+    background: var(--primary);
+    color: var(--white);
+}
+
+.btn-danger {
+    background: #e74c3c;
+    color: var(--white);
+}
+
+/* ============================================
+   STATUS BADGES
+   Badge untuk menampilkan status
+============================================ */
+.status-badge {
+    display: inline-block;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+/* Status: Baru - biru */
+.status-baru {
+    background: rgba(52, 152, 219, 0.15);
+    color: #2980b9;
+}
+
+/* Status: Diproses - oranye */
+.status-diproses {
+    background: rgba(243, 156, 18, 0.15);
+    color: #e67e22;
+}
+
+/* Status: Selesai - hijau */
+.status-selesai {
+    background: rgba(39, 174, 96, 0.15);
+    color: #1e8449;
+}
+
+/* ============================================
+   LIST ITEMS
+   Item dalam daftar laporan
+============================================ */
+.list-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Item list */
+.list-item {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    border-left: 4px solid var(--primary);  /* Aksen hijau di kiri */
+}
+
+/* Hover item */
+.list-item:hover {
+    transform: translateX(5px);
+    box-shadow: var(--shadow-lg);
+}
+
+/* Header item - judul dan status */
+.list-item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* Judul item */
+.list-item-title {
+    font-weight: 600;
+    color: var(--dark);
+    font-size: 1.1rem;
+}
+
+/* Meta info - pelapor, lokasi, tanggal */
+.list-item-meta {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    color: var(--text-light);
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.list-item-meta span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Konten/deskripsi item */
+.list-item-content {
+    color: var(--text);
+    line-height: 1.6;
+}
+
+/* Footer item */
+.list-item-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid var(--light);
+}
+
+/* ============================================
+   REVIEW CARD
+   Card untuk menampilkan review
+============================================ */
+.review-card {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: var(--shadow);
+    margin-bottom: 15px;
+}
+
+/* Header review - nama dan tanggal */
+.review-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 12px;
+}
+
+.review-card-author {
+    font-weight: 600;
+    color: var(--dark);
+}
+
+.review-card-date {
+    color: var(--text-light);
+    font-size: 0.85rem;
+}
+
+/* Rating di review */
+.review-card-rating {
+    margin-bottom: 10px;
+}
+
+/* Lokasi RTH di review */
+.review-card-rth {
+    color: var(--primary);
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Komentar review */
+.review-card-comment {
+    color: var(--text);
+    line-height: 1.6;
+}
+
+/* ============================================
+   RATING CARD
+   Card untuk rekap rating RTH
+============================================ */
+.rating-card {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: var(--shadow);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: var(--transition);
+}
+
+.rating-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lg);
+}
+
+/* Info RTH di rating card */
+.rating-card-info h4 {
+    color: var(--dark);
+    margin-bottom: 8px;
+}
+
+/* Skor rating */
+.rating-card-score {
+    text-align: center;
+}
+
+.rating-card-score .score {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.rating-card-score .label {
+    font-size: 0.8rem;
+    color: var(--text-light);
+}
+
+/* Jumlah review */
+.review-count {
+    color: var(--text-light);
+    font-size: 0.85rem;
+    margin-top: 5px;
+}
+
+/* ============================================
+   GRID LAYOUTS
+   Layout grid responsif
+============================================ */
+
+/* Grid 2 kolom */
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+/* Grid 3 kolom */
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+/* ============================================
+   STATS GRID (ADMIN)
+   Grid statistik untuk halaman admin
+============================================ */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+/* Card statistik mini */
+.stat-card-mini {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    box-shadow: var(--shadow);
+}
+
+/* Icon di stat card */
+.stat-card-mini .stat-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+.stat-card-mini .stat-icon i {
+    font-size: 1.2rem;
+    color: var(--white);
+}
+
+/* Nilai statistik */
+.stat-card-mini .stat-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--dark);
+}
+
+/* Label statistik */
+.stat-card-mini .stat-label {
+    font-size: 0.8rem;
+    color: var(--text-light);
+}
+
+/* ============================================
+   EMPTY STATE
+   Tampilan ketika tidak ada data
+============================================ */
+.empty-state {
+    text-align: center;
+    padding: 60px 20px;
+    color: var(--text-light);
+}
+
+.empty-state i {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    opacity: 0.3;
+}
+
+.empty-state h3 {
+    margin-bottom: 10px;
+    color: var(--dark);
+}
+
+/* ============================================
+   ALERTS
+   Notifikasi/pesan
+============================================ */
+.alert {
+    padding: 15px 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    animation: slideIn 0.3s ease;
+}
+
+/* Animasi slide in */
+@keyframes slideIn {
+    from { transform: translateY(-20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* Alert sukses - hijau */
+.alert-success {
+    background: rgba(39, 174, 96, 0.1);
+    color: #1e8449;
+    border: 1px solid rgba(39, 174, 96, 0.3);
+}
+
+/* Alert error - merah */
+.alert-error {
+    background: rgba(231, 76, 60, 0.1);
+    color: #c0392b;
+    border: 1px solid rgba(231, 76, 60, 0.3);
+}
+
+/* Alert warning - kuning */
+.alert-warning {
+    background: rgba(243, 156, 18, 0.1);
+    color: #d68910;
+    border: 1px solid rgba(243, 156, 18, 0.3);
+}
+
+/* ============================================
+   DATA TABLE
+   Tabel data untuk admin
+============================================ */
+.table-container {
+    overflow-x: auto;  /* Scroll horizontal di mobile */
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--white);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+/* Header tabel */
+.data-table th {
+    background: var(--dark);
+    color: var(--white);
+    padding: 15px;
+    text-align: left;
+    font-weight: 500;
+}
+
+/* Cell tabel */
+.data-table td {
+    padding: 15px;
+    border-bottom: 1px solid var(--light);
+}
+
+/* Hapus border di baris terakhir */
+.data-table tr:last-child td {
+    border-bottom: none;
+}
+
+/* Hover baris */
+.data-table tr:hover td {
+    background: rgba(39, 174, 96, 0.05);
+}
+
+/* ============================================
+   LOADING SPINNER
+   Indikator loading
+============================================ */
+.loading {
+    text-align: center;
+    padding: 40px;
+}
+
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid var(--light);
+    border-top-color: var(--primary);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto;
+}
+
+/* Animasi spin */
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+============================================ */
+@media (max-width: 768px) {
+    /* Kurangi padding */
+    .page-container {
+        padding: 80px 15px 30px;
+    }
+    
+    /* Kecilkan judul */
+    .page-header h1 {
+        font-size: 1.6rem;
+    }
+    
+    /* Tengahkan tab */
+    .tabs-container {
+        justify-content: center;
+    }
+    
+    .tab-btn {
+        padding: 10px 15px;
+        font-size: 0.9rem;
+    }
+    
+    /* Kurangi padding card */
+    .card-body {
+        padding: 20px 15px;
+    }
+    
+    /* Stack rating card di mobile */
+    .rating-card {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    
+    /* Stack header list item */
+    .list-item-header {
+        flex-direction: column;
+    }
+    
+    .list-item-footer {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    /* 2 kolom stat di mobile */
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Stack stat card */
+    .stat-card-mini {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+    }
+}
